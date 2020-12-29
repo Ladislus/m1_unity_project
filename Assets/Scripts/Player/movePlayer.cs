@@ -5,10 +5,13 @@ using UnityEngine;
 public class movePlayer : MonoBehaviour {
 
     public float speed;
+    public float tilt_angle;
 
     private float left;
     private float right;
     private float width;
+
+    private float smooth = 5.0f;
 
     private Rigidbody2D rb;
 
@@ -24,6 +27,14 @@ public class movePlayer : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         this.rb.velocity = new Vector2(this.speed * Input.GetAxis("Horizontal"), 0);
+
+        Quaternion target = Quaternion.Euler(
+            this.transform.eulerAngles.x,
+            this.transform.eulerAngles.y,
+            0 - (Input.GetAxis("Horizontal") * this.tilt_angle)
+        );
+
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, target, Time.deltaTime * smooth);
 
         if (this.transform.position.x - (this.width / 2) < this.left) {
             this.transform.position = new Vector3(

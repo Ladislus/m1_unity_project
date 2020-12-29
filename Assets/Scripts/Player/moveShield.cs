@@ -13,5 +13,7 @@ public class moveShield : MonoBehaviour
             ship.position.y + 0.2f,
             ship.position.z
         );
+
+        this.transform.rotation = this.ship.rotation;
     }
 }

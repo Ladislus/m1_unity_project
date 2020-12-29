@@ -485,7 +485,6 @@ GameObject:
   m_Component:
   - component: {fileID: 266629100}
   - component: {fileID: 266629101}
-  - component: {fileID: 266629103}
   - component: {fileID: 266629102}
   m_Layer: 0
   m_Name: GameManager
@@ -530,18 +529,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19c9bf981ed10fcfb1879b711b9d001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &266629103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266629099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2b962dcd499fe1593ea5657adfc561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &487557920 stripped
@@ -645,6 +632,7 @@ GameObject:
   - component: {fileID: 881625397}
   - component: {fileID: 881625396}
   - component: {fileID: 881625395}
+  - component: {fileID: 881625398}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -713,7 +701,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 881625396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 881625398}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &881625396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +751,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881625393}
   m_CullTransparentMesh: 0
+--- !u!114 &881625398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881625393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4224deb9994a0f220a05c1878d7ce5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1179286580
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,8 +790,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1826159888}
   - {fileID: 1803627368}
+  - {fileID: 1826159888}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1253,7 +1264,7 @@ Transform:
   - {fileID: 487557920}
   - {fileID: 105185339}
   m_Father: {fileID: 1179286581}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826159887
 GameObject:
@@ -1285,7 +1296,7 @@ Transform:
   - {fileID: 1786689642}
   - {fileID: 1378974583}
   m_Father: {fileID: 1179286581}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2125336659
 PrefabInstance:
@@ -1564,6 +1575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: tilt_angle
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364166235420344140, guid: 3b05e2a111c8d9acba595427a8fab5e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5515793421908947561, guid: 3b05e2a111c8d9acba595427a8fab5e7,
         type: 3}

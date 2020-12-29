@@ -1,0 +1,1 @@
+public enum SPColor { Blue, Green }

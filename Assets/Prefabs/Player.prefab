@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 975414071737737550}
   - component: {fileID: 975414071737737549}
   - component: {fileID: 975414071737737548}
+  - component: {fileID: 3364166235420344140}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -145,6 +146,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 975414071829769003}
+--- !u!114 &3364166235420344140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975414071737737536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d441a53fec3ed9f8a76b97ec82d79de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blue_shield: {fileID: -4003860006370110250, guid: ee5fb49cb88ff03018d7e07f7640fabd,
+    type: 3}
+  green_sprite: {fileID: -476560682929659975, guid: ee5fb49cb88ff03018d7e07f7640fabd,
+    type: 3}
 --- !u!1 &975414071829769004
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  tilt_angle: 0
 --- !u!61 &5515793421908947561
 BoxCollider2D:
   m_ObjectHideFlags: 0

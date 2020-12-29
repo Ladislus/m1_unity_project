@@ -41,6 +41,24 @@ TextureImporter:
   - first:
       213: -4003860006370110250
     second: shield_blue
+  - first:
+      213: 7276934982703339473
+    second: laser_blue
+  - first:
+      213: 1395477098725429660
+    second: bullet_blue
+  - first:
+      213: -8818603323004882490
+    second: orb_blue
+  - first:
+      213: 1778572358164647343
+    second: laser_green
+  - first:
+      213: -587045061119207155
+    second: bullet_green
+  - first:
+      213: -7538467362459351936
+    second: orb_green
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -422,7 +440,7 @@ TextureImporter:
         width: 133
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,6 +448,132 @@ TextureImporter:
       bones: []
       spriteID: 6d49aed998e6f68c0800000000000000
       internalID: -4003860006370110250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_blue
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 564
+        width: 18
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d755a9dfcddcf460800000000000000
+      internalID: 7276934982703339473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_blue
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 570
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91d8b9170bbd5310800000000000000
+      internalID: 1395477098725429660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orb_blue
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 501
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1f63d20070e9580800000000000000
+      internalID: -8818603323004882490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_green
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 204
+        width: 18
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad8bbfe222cea810800000000000000
+      internalID: 1778572358164647343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_green
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 206
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0997d090a56ad7f0800000000000000
+      internalID: -587045061119207155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orb_green
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 242
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0840cb5dfdbf16790800000000000000
+      internalID: -7538467362459351936
       vertices: []
       indices: 
       edges: []

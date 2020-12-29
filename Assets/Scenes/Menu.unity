@@ -519,6 +519,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9802b08732c61324e84d1c3c5105a78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: 50892e16f93d98725ac7339b003a9a92, type: 3}
+  click: {fileID: 8300000, guid: c35901803a7ef8d8bbcf273c9bbfad43, type: 3}
+  damage: {fileID: 8300000, guid: b878334bbc55e4e94abc0354bc2f2838, type: 3}
+  explosion1: {fileID: 8300000, guid: 98aba384d6752efb796e883121cf242f, type: 3}
+  explosion2: {fileID: 8300000, guid: 12ef13f659595c2c48f6d269fb3ba637, type: 3}
+  explosion3: {fileID: 8300000, guid: 50b8a4394cdcdcd76b8d5608ec474b6a, type: 3}
+  explosion4: {fileID: 8300000, guid: eb1d1616bb391d27fb15bdcdeec5cc9d, type: 3}
+  explosion5: {fileID: 8300000, guid: 84a8f46b17b9df848bd6dae4f636d35f, type: 3}
+  explosion6: {fileID: 8300000, guid: a4aaaef35d8986b9da0eb8eb8cac3b0a, type: 3}
+  explosion7: {fileID: 8300000, guid: e6c916ac7cb101510891974fd4862aac, type: 3}
+  powerup: {fileID: 8300000, guid: 41ef7216aaf8c1ab49ff436d2a730274, type: 3}
+  machinegun: {fileID: 8300000, guid: ea7446096c39e08b1bf7b99d6dffca73, type: 3}
+  lasergun: {fileID: 8300000, guid: 16c25250151e04a37b489a3f056c8314, type: 3}
+  iongun: {fileID: 8300000, guid: edf645364e35c585a971f1c23ee34443, type: 3}
 --- !u!114 &266629102
 MonoBehaviour:
   m_ObjectHideFlags: 0

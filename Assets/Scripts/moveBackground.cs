@@ -13,15 +13,21 @@ public class moveBackground : MonoBehaviour {
 
     void Start() {
         
-        GetComponent<RigidBody2D>().velocity = new Vector2(0, -this.speed);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, -this.speed);
 
-        this.bottom = Camera.main.ViewToWorldPoint(new Vector(0, 0, 0)).y;
+        this.bottom = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
         this.height = GetComponent<SpriteRenderer>().bounds.size.y;
     }
 
 
     void Update()
     {
-        
+        if (this.transform.position.y + (this.height / 2) < this.bottom) {
+            this.transform.position = new Vector3(
+                this.transform.position.x,
+                this.respawn.transform.position.y + (this.height),
+                this.transform.position.z
+            );
+        }
     }
 }

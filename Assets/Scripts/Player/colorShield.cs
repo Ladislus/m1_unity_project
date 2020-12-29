@@ -7,7 +7,7 @@ public class colorShield : MonoBehaviour {
     public Sprite blue_shield;
     public Sprite green_sprite;
 
-    private SPColor color = ShieldColor.Blue;
+    private SPColor color = SPColor.Blue;
 
     private SpriteRenderer sr;
 

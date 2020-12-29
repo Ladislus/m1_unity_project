@@ -4,27 +4,26 @@ using UnityEngine;
 
 public abstract class Gun {
 
-    private Transform transform;
+    protected GameObject bluePrefab;
+    protected GameObject greenPrefab;
 
-    private float cooldown;
-    private float current_cooldown;
+    protected Transform transform;
 
-    private float min_damages;
-    private float max_damages;
+    protected float cooldown;
+    protected float current_cooldown;
 
+    protected SPColor color;
 
-    private SPColor color;
-
-    public Gun(Transform transform, float cooldown, float min_damages, float max_damages, SPColor color) {
+    public Gun(Transform transform, float cooldown, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
         this.cooldown = cooldown;
         this.current_cooldown = cooldown;
 
-        this.min_damages = min_damages;
-        this.max_damages = max_damages;
+        this.bluePrefab = bluePrefab;
+        this.greenPrefab = greenPrefab;
 
         this.transform = transform;
 
-        this.color = SPColor;
+        this.color = color;
     }
 
     public void isReady(float elapsedTime) {

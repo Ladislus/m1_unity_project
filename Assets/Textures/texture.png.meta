@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -8049738596340491021
     second: background
+  - first:
+      213: -3589738470123372747
+    second: asteroid_small
+  - first:
+      213: 633101907170852435
+    second: asteroid_medium
+  - first:
+      213: -2356685445328767936
+    second: asteroid_big
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -134,7 +143,7 @@ TextureImporter:
         width: 375
         height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,6 +151,69 @@ TextureImporter:
       bones: []
       spriteID: 3fc9f5e5565994090800000000000000
       internalID: -8049738596340491021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_small
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 489
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ffdb371efae2ec0800000000000000
+      internalID: -3589738470123372747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_medium
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 431
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e7a8b84da39c800800000000000000
+      internalID: 633101907170852435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_big
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 417
+        width: 119
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04478dfd21f5b4fd0800000000000000
+      internalID: -2356685445328767936
       vertices: []
       indices: 
       edges: []

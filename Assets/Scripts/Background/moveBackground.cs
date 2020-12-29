@@ -25,7 +25,7 @@ public class moveBackground : MonoBehaviour {
         if (this.transform.position.y + (this.height / 2) < this.bottom) {
             this.transform.position = new Vector3(
                 this.transform.position.x,
-                this.respawn.transform.position.y + (this.height),
+                this.respawn.transform.position.y + (this.height) - 0.1f,
                 this.transform.position.z
             );
         }

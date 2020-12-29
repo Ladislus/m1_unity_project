@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveShield : MonoBehaviour
-{
+public class moveShield : MonoBehaviour {
 
     public Transform ship;
 

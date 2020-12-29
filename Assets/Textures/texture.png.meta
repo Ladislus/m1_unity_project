@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: -2356685445328767936
     second: asteroid_big
+  - first:
+      213: 8955681608942021224
+    second: title
+  - first:
+      213: 2226483772909294084
+    second: play_button
+  - first:
+      213: -6844059347683181428
+    second: music_button
+  - first:
+      213: -7880271154122939762
+    second: highscore_button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -214,6 +226,90 @@ TextureImporter:
       bones: []
       spriteID: 04478dfd21f5b4fd0800000000000000
       internalID: -2356685445328767936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 150
+        width: 536
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86aec7e59f8f84c70800000000000000
+      internalID: 8955681608942021224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_button
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 485
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4021e6ee13f06ee10800000000000000
+      internalID: 2226483772909294084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: music_button
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 678
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cf6afd8440501a0800000000000000
+      internalID: -6844059347683181428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: highscore_button
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 676
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82aeb40327a3a290800000000000000
+      internalID: -7880271154122939762
       vertices: []
       indices: 
       edges: []

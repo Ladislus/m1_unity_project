@@ -58,5 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# Jetbrains
+# Jetbrains & VSCode
 .idea/
+.vscode/

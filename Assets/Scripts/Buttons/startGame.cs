@@ -8,6 +8,7 @@ public class startGame : MonoBehaviour {
     public GameObject gameManager;
 
     public void OnClick() {
+        // FIXME
         this.gameManager.GetComponent<SoundManager>().playClick();
         SceneManager.LoadSceneAsync("Game");
     }

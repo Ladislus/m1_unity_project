@@ -7,8 +7,6 @@ public class ScoreManager : MonoBehaviour {
 
     private static ScoreManager _instance;
 
-    public Text highscore_text;
-
     private int highscore;
     private int score = 0;
 
@@ -20,7 +18,8 @@ public class ScoreManager : MonoBehaviour {
         else Destroy(this); 
 
         this.highscore = PlayerPrefs.GetInt("highscore", 0);
-        this.highscore_text.text = "" + this.highscore;
+        // TODO
+        GameObject.Find("Score").GetComponent<Text>().text = "" + this.highscore; 
     }
 
     void AddPoint(int points) {
@@ -31,7 +30,8 @@ public class ScoreManager : MonoBehaviour {
         if (this.score > this.highscore) {
             this.highscore = score;
             PlayerPrefs.SetInt("highscore", this.score);
-            this.highscore_text.text = "" + this.highscore;
+            // TODO
+            GameObject.Find("Score").GetComponent<Text>().text = "" + this.highscore; 
         }
         this.score = 0;
     }

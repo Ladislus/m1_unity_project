@@ -1552,7 +1552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 9999
 --- !u!222 &2131028233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1727,5 +1727,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2917579525227361574, guid: f043c9f784cd6111cae9d6b99e4ffabf,
+        type: 3}
+      propertyPath: highscore_text
+      value: 
+      objectReference: {fileID: 2131028232}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f043c9f784cd6111cae9d6b99e4ffabf, type: 3}

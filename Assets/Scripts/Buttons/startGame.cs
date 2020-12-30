@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour {
 
-    public GameObject gameManager;
+    private GameObject gameManager;
+
+    void Awake() {
+        this.gameManager = GameObject.FindWithTag("GameController");
+    }
 
     public void OnClick() {
         // FIXME

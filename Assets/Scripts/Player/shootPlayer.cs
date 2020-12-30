@@ -14,7 +14,7 @@ public class shootPlayer : MonoBehaviour {
     private Gun gun;
 
     void Start() {
-        this.gun = new MachineGun(this.transform, SPColor.Blue, this.blueBullet, this.greenBullet);
+        this.gun = GunFactory.make(GunFactory.MACHINEGUN, this.transform, SPColor.Blue, this.blueBullet, this.greenBullet);
     }
 
     void Update() {

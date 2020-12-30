@@ -732,7 +732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4224deb9994a0f220a05c1878d7ce5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 933463437}
 --- !u!1 &933463437
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +745,7 @@ GameObject:
   - component: {fileID: 933463438}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1251,7 +1250,7 @@ GameObject:
   - component: {fileID: 2131028232}
   m_Layer: 5
   m_Name: Score
-  m_TagString: Untagged
+  m_TagString: Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

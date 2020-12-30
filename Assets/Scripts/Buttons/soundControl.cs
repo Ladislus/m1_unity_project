@@ -7,7 +7,7 @@ public class soundControl : MonoBehaviour {
     private GameObject gameManager;
 
     void Awake() {
-        this.gameManager = GameObject.Find("GameManager");
+        this.gameManager = GameObject.FindWithTag("GameController");
     }
 
     public void Onclick() {

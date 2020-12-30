@@ -12,14 +12,20 @@ public abstract class Gun {
     protected float cooldown;
     protected float current_cooldown;
 
+    protected float min_damages;
+    protected float max_damages;
+
     protected SPColor color;
 
-    public Gun(Transform transform, float cooldown, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
+    public Gun(Transform transform, float cooldown, float min_damages, float max_damages, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
         this.cooldown = cooldown;
         this.current_cooldown = cooldown;
 
         this.bluePrefab = bluePrefab;
         this.greenPrefab = greenPrefab;
+
+        this.min_damages = min_damages;
+        this.max_damages = max_damages;
 
         this.transform = transform;
 
@@ -34,5 +40,35 @@ public abstract class Gun {
         }
     }
 
-    public abstract void shoot();
+    public void shoot() {
+
+        GameObject selectedPrefab;
+        if (this.color == SPColor.Blue) selectedPrefab = this.bluePrefab;
+        else selectedPrefab = this.greenPrefab;
+
+        Quaternion target_rotation;
+        if (this.transform.eulerAngles.z < -90 || this.transform.eulerAngles.z > 90) {
+            target_rotation = Quaternion.Euler(
+                this.transform.eulerAngles.x,
+                this.transform.eulerAngles.y,
+                -180
+            );
+        } else {
+            target_rotation = Quaternion.Euler(
+                this.transform.eulerAngles.x,
+                this.transform.eulerAngles.y,
+                0
+            );
+        }
+
+        Object.Instantiate(
+            selectedPrefab,
+            new Vector3(
+                    this.transform.position.x,
+                    this.transform.position.y + 0.5f,
+                    this.transform.position.z
+                ),
+            target_rotation
+        );
+    }
 }

@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour {
 
         this.highscore = PlayerPrefs.GetInt("highscore", 0);
         // TODO
-        GameObject.Find("Score").GetComponent<Text>().text = "" + this.highscore; 
+        GameObject.FindWithTag("Score").GetComponent<Text>().text = "" + this.highscore; 
     }
 
     void AddPoint(int points) {
@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour {
             this.highscore = score;
             PlayerPrefs.SetInt("highscore", this.score);
             // TODO
-            GameObject.Find("Score").GetComponent<Text>().text = "" + this.highscore; 
+            GameObject.FindWithTag("Score").GetComponent<Text>().text = "" + this.highscore; 
         }
         this.score = 0;
     }

@@ -9,7 +9,9 @@ public class moveAsteroid : MonoBehaviour {
     public float max_speed;
     public float spin_speed;
     public float respawn_field;
-    
+
+    public Rigidbody2D rb;
+
     private float height;
     private float width;
 
@@ -22,11 +24,8 @@ public class moveAsteroid : MonoBehaviour {
 
     private bool spin_direction;
 
-    private Rigidbody2D rb;
-
     void Start() {
-        
-        this.rb = GetComponent<Rigidbody2D>();
+
         this.rb.velocity = new Vector2(0, -this.speed);
 
         this.top = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class soundControl : MonoBehaviour {
 
-    private GameObject gameManager;
+    private SoundManager soundManager;
 
     void Awake() {
-        this.gameManager = GameObject.FindWithTag("GameController");
+        this.soundManager = GameObject.FindWithTag("GameController").GetComponent<SoundManager>();
     }
 
     public void Onclick() {
-        this.gameManager.GetComponent<SoundManager>().toggleMusic();
+        this.soundManager.toggleMusic();
     }
 }

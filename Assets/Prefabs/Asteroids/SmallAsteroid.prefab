@@ -151,6 +151,7 @@ MonoBehaviour:
   max_speed: 10
   spin_speed: 10
   respawn_field: 20
+  rb: {fileID: 8660369487438248852}
 --- !u!114 &1050289130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444291826f5332faa48c49994de10f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade_out_script: {fileID: 1050289131}
+  rn: {fileID: 8660369487438248852}
 --- !u!114 &1050289131
 MonoBehaviour:
   m_ObjectHideFlags: 0

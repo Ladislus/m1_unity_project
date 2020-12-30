@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class triggerAsteroid : MonoBehaviour {
 
+    public fadeOut fade_out_script;
+    public Rigidbody2D rn;
+
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.name == "Shield") {
             collider.gameObject.GetComponent<lifeShield>().hit();

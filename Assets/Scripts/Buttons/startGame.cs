@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour {
+
+    public GameObject gameManager;
+
     public void OnClick() {
-        SceneManager.LoadScene("Game");
+        this.gameManager.GetComponent<SoundManager>().playClick();
+        SceneManager.LoadSceneAsync("Game");
     }
 }

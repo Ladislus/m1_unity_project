@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class soundControl : MonoBehaviour {
 
-    public GameObject gameManager;
+    private GameObject gameManager;
+
+    void Awake() {
+        this.gameManager = GameObject.Find("GameManager");
+    }
 
     public void Onclick() {
         this.gameManager.GetComponent<SoundManager>().toggleMusic();

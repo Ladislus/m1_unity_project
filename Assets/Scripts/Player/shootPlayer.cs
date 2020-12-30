@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class shootPlayer : MonoBehaviour {
 
-    public GameObject blueOrb;
-    public GameObject greenOrb;
-    public GameObject blueBullet;
-    public GameObject greenBullet;
-    public GameObject blueLaser;
-    public GameObject greenLaser;
+    private GunFactory gunFactory;
 
     private Gun gun;
 
+    void Awake() {
+        this.gunFactory = GameObject.FindWithTag("GameController").GetComponent<GunFactory>();
+    }
+
     void Start() {
-        this.gun = GunFactory.make(GunFactory.MACHINEGUN, this.transform, SPColor.Blue, this.blueBullet, this.greenBullet);
+        this.gun = this.gunFactory.make(GunFactory.MACHINEGUN, this.transform, SPColor.Blue);
     }
 
     void Update() {
-        this.gun.isReady(Time.deltaTime);
+        if (this.gun.isReady(Time.deltaTime)) {
+            this.gun.shoot();
+        }
     }
 }

@@ -2,34 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunFactory {
+public class GunFactory : MonoBehaviour {
+
+    public GameObject blueOrb;
+    public GameObject greenOrb;
+    public GameObject blueBullet;
+    public GameObject greenBullet;
+    public GameObject blueLaser;
+    public GameObject greenLaser;
 
     public const int MACHINEGUN = 0;
     public const int LASERGUN = 1;
     public const int IONGUN = 2;
 
-    public static Gun make(int gunType, Transform transform, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
+    public Gun make(int gunType, Transform transform, SPColor color) {
         switch (gunType) {
             case MACHINEGUN:
-                return getMG(transform, color, bluePrefab, greenPrefab);
+                if (color == SPColor.Blue) return getMG(transform, color, this.blueBullet);
+                return getMG(transform, color, this.greenBullet);
             case LASERGUN:
-                return getLG(transform, color, bluePrefab, greenPrefab);
-            case IONGUN:
-                return getIG(transform, color, bluePrefab, greenPrefab);
+                if (color == SPColor.Blue) return getLG(transform, color, this.blueLaser);
+                return getLG(transform, color, this.greenLaser);
             default:
-                return getMG(transform, color, bluePrefab, greenPrefab);
+            case IONGUN:
+                if (color == SPColor.Blue) return getIG(transform, color, this.blueOrb);
+                return getIG(transform, color, this.greenOrb);
         }
     }
 
-    private static MachineGun getMG(Transform transform, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
-        return new MachineGun(transform, 0.3f, 1.0f, 1.5f, color, bluePrefab, greenPrefab);
+    private MachineGun getMG(Transform transform, SPColor color, GameObject prefab) {
+        return new MachineGun(transform, 0.3f, 1.0f, 1.5f, color, prefab);
     }
 
-    private static LaserGun getLG(Transform transform, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
-        return new LaserGun(transform, 0.6f, 1.2f, 1.7f, color, bluePrefab, greenPrefab);
+    private LaserGun getLG(Transform transform, SPColor color, GameObject prefab) {
+        return new LaserGun(transform, 0.6f, 1.2f, 1.7f, color, prefab);
     }
 
-    private static IonGun getIG(Transform transform, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
-        return new IonGun(transform, 0.15f, 0.8f, 0.1f, color, bluePrefab, greenPrefab);
+    private IonGun getIG(Transform transform, SPColor color, GameObject prefab) {
+        return new IonGun(transform, 0.15f, 0.8f, 0.1f, color, prefab);
     }
 }

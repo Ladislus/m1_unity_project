@@ -4,57 +4,52 @@ using UnityEngine;
 
 public abstract class Gun {
 
-    protected GameObject bluePrefab;
-    protected GameObject greenPrefab;
+    private GameObject prefab;
 
-    protected Transform transform;
+    private Transform transform;
 
-    protected float cooldown;
-    protected float current_cooldown;
+    private float cooldown;
+    private float cooldownStatus;
 
-    protected float min_damages;
-    protected float max_damages;
+    private float minDamages;
+    private float maxDamages;
 
-    protected SPColor color;
+    private SPColor color;
 
-    public Gun(Transform transform, float cooldown, float min_damages, float max_damages, SPColor color, GameObject bluePrefab, GameObject greenPrefab) {
+    public Gun(Transform transform, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab) {
         this.cooldown = cooldown;
-        this.current_cooldown = cooldown;
+        this.cooldownStatus = cooldown;
 
-        this.bluePrefab = bluePrefab;
-        this.greenPrefab = greenPrefab;
+        this.prefab = prefab;
 
-        this.min_damages = min_damages;
-        this.max_damages = max_damages;
+        this.minDamages = minDamages;
+        this.maxDamages = maxDamages;
 
         this.transform = transform;
 
         this.color = color;
     }
 
-    public void isReady(float elapsedTime) {
-        this.current_cooldown -= elapsedTime;
-        if (this.current_cooldown <= 0) {
-            shoot();
-            this.current_cooldown = this.cooldown;
+    public bool isReady(float elapsedTime) {
+        this.cooldownStatus -= elapsedTime;
+        if (this.cooldownStatus <= 0) {
+            this.cooldownStatus = this.cooldown;
+            return true;
         }
+        return false;
     }
 
     public void shoot() {
 
-        GameObject selectedPrefab;
-        if (this.color == SPColor.Blue) selectedPrefab = this.bluePrefab;
-        else selectedPrefab = this.greenPrefab;
-
-        Quaternion target_rotation;
+        Quaternion targetRotation;
         if (this.transform.eulerAngles.z < -90 || this.transform.eulerAngles.z > 90) {
-            target_rotation = Quaternion.Euler(
+            targetRotation = Quaternion.Euler(
                 this.transform.eulerAngles.x,
                 this.transform.eulerAngles.y,
                 -180
             );
         } else {
-            target_rotation = Quaternion.Euler(
+            targetRotation = Quaternion.Euler(
                 this.transform.eulerAngles.x,
                 this.transform.eulerAngles.y,
                 0
@@ -62,13 +57,13 @@ public abstract class Gun {
         }
 
         Object.Instantiate(
-            selectedPrefab,
+            this.prefab,
             new Vector3(
                     this.transform.position.x,
                     this.transform.position.y + 0.5f,
                     this.transform.position.z
                 ),
-            target_rotation
+            targetRotation
         );
     }
 }

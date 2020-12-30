@@ -11,13 +11,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip click;
 
     public AudioClip damage;
-    public AudioClip explosion1;
-    public AudioClip explosion2;
-    public AudioClip explosion3;
-    public AudioClip explosion4;
-    public AudioClip explosion5;
-    public AudioClip explosion6;
-    public AudioClip explosion7;
+    public List<AudioClip> explosions;
 
     public AudioClip powerup;
 
@@ -25,19 +19,13 @@ public class SoundManager : MonoBehaviour {
     public AudioClip lasergun;
     public AudioClip iongun;
 
-    private AudioSource music_source;
+    public AudioSource music_source;
 
     void Awake() {
         if (_instance == null) { 
             _instance = this;
             DontDestroyOnLoad(this.gameObject); 
         } else Destroy(this);
-
-        this.music_source = this.gameObject.AddComponent<AudioSource>() as AudioSource;
-        this.music_source.transform.position = new Vector3(0, 0, 0);
-        this.music_source.clip = this.music;
-        this.music_source.loop = true;
-        this.music_source.Play();
     }
 
     private void playClip(AudioClip clip) {
@@ -45,8 +33,7 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void toggleMusic() {
-        if (this.music_source.volume > 0.5f) this.music_source.volume = 0.0f;
-        else this.music_source.volume = 1.0f;
+        this.music_source.mute = !this.music_source.mute;
     }
 
     public void playClick() {

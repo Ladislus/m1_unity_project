@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class fadeOut : MonoBehaviour {
-    public float fade_speed;
+    
+    public float fade_speed = 5;
 
-    private SpriteRenderer sr;
-
-    void Start() {
-        this.sr = GetComponent<SpriteRenderer>();
-    }
+    public SpriteRenderer sr;
 
     void Update() {
         Color c = this.sr.color;
-        c.a -= this.fade_speed;
+        c.a -= this.fade_speed * Time.deltaTime;
         this.sr.color = c;
         if (this.sr.color.a < 0) Destroy(this.gameObject);
     }

@@ -13,10 +13,12 @@ GameObject:
   - component: {fileID: 8660369487438248852}
   - component: {fileID: 8660369487438248853}
   - component: {fileID: 8660369487438248810}
+  - component: {fileID: 1050289130}
+  - component: {fileID: 1050289131}
   m_Layer: 0
   m_Name: SmallAsteroid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Asteroid
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -27,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8660369487438248808}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.97, y: 0.87, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
@@ -149,3 +151,29 @@ MonoBehaviour:
   max_speed: 10
   spin_speed: 10
   respawn_field: 20
+--- !u!114 &1050289130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660369487438248808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444291826f5332faa48c49994de10f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1050289131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660369487438248808}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93023515c120d418bbe70d20134c542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fade_speed: 5
+  sr: {fileID: 8660369487438248855}

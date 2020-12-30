@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class cleanProjectile : MonoBehaviour {
+    
     private float height;
     private float width;
 

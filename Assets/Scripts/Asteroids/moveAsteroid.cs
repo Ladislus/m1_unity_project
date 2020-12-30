@@ -5,12 +5,12 @@ using UnityEngine;
 public class moveAsteroid : MonoBehaviour {
 
     public float speed;
-    public float min_speed;
-    public float max_speed;
-    public float spin_speed;
-    public float respawn_field;
+    public float minSpeed;
+    public float maxSpeed;
+    public float spinSpeed;
+    public float respawnField;
 
-    public Rigidbody2D rb;
+    public Rigidbody2D rigidBody;
 
     private float height;
     private float width;
@@ -22,11 +22,11 @@ public class moveAsteroid : MonoBehaviour {
 
     private float smooth = 5.0f;
 
-    private bool spin_direction;
+    private bool spinDirection;
 
     void Start() {
 
-        this.rb.velocity = new Vector2(0, -this.speed);
+        this.rigidBody.velocity = new Vector2(0, -this.speed);
 
         this.top = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
         this.bottom = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
@@ -47,12 +47,12 @@ public class moveAsteroid : MonoBehaviour {
         if (this.transform.position.y + (this.height / 2) < this.bottom) {
             this.transform.position = new Vector3(
                 Random.Range(this.left + (this.width / 2), this.right - (this.width / 2)),
-                Random.Range(this.top + (this.height / 2), this.top + (this.height / 2) + this.respawn_field),
+                Random.Range(this.top + (this.height / 2), this.top + (this.height / 2) + this.respawnField),
                 this.transform.position.z
             );
 
-            this.speed = Random.Range(this.min_speed, this.max_speed);
-            this.rb.velocity = new Vector2(0, -this.speed);
+            this.speed = Random.Range(this.minSpeed, this.maxSpeed);
+            this.rigidBody.velocity = new Vector2(0, -this.speed);
 
             this.selectSpinRotation();
         }
@@ -60,16 +60,16 @@ public class moveAsteroid : MonoBehaviour {
 
     private void selectSpinRotation() {
         float randomized = Random.Range(0f, 1f);
-        if (randomized >= 0.5f) this.spin_direction = true;
-        else this.spin_direction = false;
+        if (randomized >= 0.5f) this.spinDirection = true;
+        else this.spinDirection = false;
     }
 
     private void rotate() {
-        if (this.spin_direction) {
+        if (this.spinDirection) {
             Quaternion target = Quaternion.Euler(
                 this.transform.eulerAngles.x,
                 this.transform.eulerAngles.y,
-                this.transform.eulerAngles.z + (this.speed * this.spin_speed)
+                this.transform.eulerAngles.z + (this.speed * this.spinSpeed)
             );
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, target, Time.deltaTime * smooth);
@@ -77,7 +77,7 @@ public class moveAsteroid : MonoBehaviour {
             Quaternion target = Quaternion.Euler(
                 this.transform.eulerAngles.x,
                 this.transform.eulerAngles.y,
-                this.transform.eulerAngles.z - (this.speed * this.spin_speed)
+                this.transform.eulerAngles.z - (this.speed * this.spinSpeed)
             );
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, target, Time.deltaTime * smooth);

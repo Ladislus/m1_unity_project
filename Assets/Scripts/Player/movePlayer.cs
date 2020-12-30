@@ -5,7 +5,7 @@ using UnityEngine;
 public class movePlayer : MonoBehaviour {
 
     public float speed;
-    public float tilt_angle;
+    public float tiltAngle;
 
     private float left;
     private float right;
@@ -13,7 +13,7 @@ public class movePlayer : MonoBehaviour {
 
     private float smooth = 5.0f;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D rigidBody;
 
     void Start() {
         this.left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
@@ -21,17 +21,17 @@ public class movePlayer : MonoBehaviour {
 
         this.width = GetComponent<SpriteRenderer>().bounds.size.x;
 
-        this.rb = GetComponent<Rigidbody2D>();
+        this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update() {
-        this.rb.velocity = new Vector2(this.speed * Input.GetAxis("Horizontal"), 0);
+        this.rigidBody.velocity = new Vector2(this.speed * Input.GetAxis("Horizontal"), 0);
 
         Quaternion target = Quaternion.Euler(
             this.transform.eulerAngles.x,
             this.transform.eulerAngles.y,
-            0 - (Input.GetAxis("Horizontal") * this.tilt_angle)
+            0 - (Input.GetAxis("Horizontal") * this.tiltAngle)
         );
 
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, target, Time.deltaTime * smooth);

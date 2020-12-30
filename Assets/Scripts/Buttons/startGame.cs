@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class startGame : MonoBehaviour {
 
-    public SoundManager soundManager;
     public LevelFader fader;
 
+    private SoundManager soundManager;
+
+    void Awake() {
+        this.soundManager = GameObject.FindWithTag("GameController").GetComponent<SoundManager>();
+    }
+
     public void OnClick() {
-        // FIXME
-        this.soundManager.playClick();
+        this.soundManager.playSound(SoundManager.CLICK);
         this.fader.fadeOutToLevel("Game");
     }
 }

@@ -47,9 +47,10 @@ GameObject:
   - component: {fileID: 3364166235420344140}
   - component: {fileID: 2149655034120595127}
   - component: {fileID: 1963174350}
+  - component: {fileID: 1222661464}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680170a2fefaec222ba9de310140da0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 975414071829769003}
+  shipTransform: {fileID: 975414071829769003}
 --- !u!114 &3364166235420344140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,9 +177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c854f9b83c62d1c7d9db08f5279e4d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeout_script: {fileID: 1963174350}
+  fadeOutScript: {fileID: 1963174350}
   shipAnimator: {fileID: 2140103597}
+  shieldCollider: {fileID: 975414071737737549}
   shipCollider: {fileID: 5515793421908947561}
+  soundManager: {fileID: 0}
 --- !u!114 &1963174350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,8 +194,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93023515c120d418bbe70d20134c542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade_speed: 5
-  sr: {fileID: 975414071737737550}
+  fadeSpeed: 5
+  spriteRenderer: {fileID: 975414071737737550}
+--- !u!114 &1222661464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975414071737737536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f7730119c0e6741bfa991ccc76983f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeShieldScript: {fileID: 2149655034120595127}
 --- !u!1 &975414071829769004
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,9 +225,10 @@ GameObject:
   - component: {fileID: 975414071829769000}
   - component: {fileID: 7194364050133204497}
   - component: {fileID: 7655325797483057250}
+  - component: {fileID: 736062217761017192}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  tilt_angle: 25
+  tiltAngle: 25
 --- !u!114 &7194364050133204497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,5 +413,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93023515c120d418bbe70d20134c542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade_speed: 5
-  sr: {fileID: 975414071829769001}
+  fadeSpeed: 5
+  spriteRenderer: {fileID: 975414071829769001}
+--- !u!114 &736062217761017192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975414071829769004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15c3631983f898f2a34b1e89621e286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 5515793421908947561}
+  fadeOutScript: {fileID: 7655325797483057250}

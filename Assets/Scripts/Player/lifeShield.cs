@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class lifeShield : MonoBehaviour {
     
-    public fadeOut fadeout_script;
-
+    public fadeOut fadeOutScript;
     public Animator shipAnimator;
-    public BoxCollider2D shipCollider;
+    public Collider2D shieldCollider;
+    public Collider2D shipCollider;
 
     private SoundManager soundManager;
 
-    private int life_points = 3;
+    private int lifePoints = 3;
 
     void Awake() {
         this.soundManager = GameObject.FindWithTag("GameController").GetComponent<SoundManager>();
     }
 
     public void hit() {
-        if (this.life_points == 0) {
-            this.fadeout_script.enabled = true;
+        if (this.lifePoints == 0) {
+            this.shieldCollider.enabled = false;
+            this.fadeOutScript.enabled = true;
             this.shipCollider.enabled = true;
         } else {
-            this.soundManager.playDamage();
-            --this.life_points;
-            this.shipAnimator.SetInteger("Life", this.life_points);
+            this.soundManager.playSound(SoundManager.DAMAGE);
+            this.shipAnimator.SetInteger("Life", --this.lifePoints);
         }
     }
 

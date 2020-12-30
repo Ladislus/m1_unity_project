@@ -146,11 +146,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  min_speed: 2
-  max_speed: 7
-  spin_speed: 7
-  respawn_field: 25
-  rb: {fileID: 7613427616096886550}
+  minSpeed: 2
+  maxSpeed: 7
+  spinSpeed: 7
+  respawnField: 25
+  rigidBody: {fileID: 7613427616096886550}
 --- !u!114 &1791186719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,8 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444291826f5332faa48c49994de10f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade_out_script: {fileID: 1791186720}
-  rn: {fileID: 7613427616096886550}
+  fadeOutScript: {fileID: 1791186720}
+  collider: {fileID: 5302476794774607876}
+  rigidbody: {fileID: 7613427616096886550}
 --- !u!114 &1791186720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,5 +178,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93023515c120d418bbe70d20134c542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade_speed: 5
-  sr: {fileID: 4685928660037056894}
+  fadeSpeed: 5
+  spriteRenderer: {fileID: 4685928660037056894}

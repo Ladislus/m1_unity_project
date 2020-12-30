@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Score
   - Asteroid
+  - LevelController
+  - Ship
+  - Shield
+  - Alien
   layers:
   - Default
   - TransparentFX

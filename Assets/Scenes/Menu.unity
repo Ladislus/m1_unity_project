@@ -745,7 +745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4224deb9994a0f220a05c1878d7ce5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundManager: {fileID: 933463438}
   fader: {fileID: 112083834}
 --- !u!1 &933463437
 GameObject:
@@ -760,7 +759,7 @@ GameObject:
   - component: {fileID: 933463438}
   - component: {fileID: 933463441}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameController
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,11 +788,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 84a8f46b17b9df848bd6dae4f636d35f, type: 3}
   - {fileID: 8300000, guid: a4aaaef35d8986b9da0eb8eb8cac3b0a, type: 3}
   - {fileID: 8300000, guid: e6c916ac7cb101510891974fd4862aac, type: 3}
-  powerup: {fileID: 8300000, guid: 41ef7216aaf8c1ab49ff436d2a730274, type: 3}
-  machinegun: {fileID: 8300000, guid: ea7446096c39e08b1bf7b99d6dffca73, type: 3}
-  lasergun: {fileID: 8300000, guid: 16c25250151e04a37b489a3f056c8314, type: 3}
-  iongun: {fileID: 8300000, guid: edf645364e35c585a971f1c23ee34443, type: 3}
-  music_source: {fileID: 933463441}
+  powerUp: {fileID: 8300000, guid: 41ef7216aaf8c1ab49ff436d2a730274, type: 3}
+  machineGun: {fileID: 8300000, guid: ea7446096c39e08b1bf7b99d6dffca73, type: 3}
+  laserGun: {fileID: 8300000, guid: 16c25250151e04a37b489a3f056c8314, type: 3}
+  ionGun: {fileID: 8300000, guid: edf645364e35c585a971f1c23ee34443, type: 3}
+  musicSource: {fileID: 933463441}
 --- !u!114 &933463439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,6 +1506,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2149655034120595127, guid: 3b05e2a111c8d9acba595427a8fab5e7,
+        type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 933463438}
     - target: {fileID: 3364166235420344140, guid: 3b05e2a111c8d9acba595427a8fab5e7,
         type: 3}
       propertyPath: m_Enabled

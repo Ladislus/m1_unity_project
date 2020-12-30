@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class moveBullet : MonoBehaviour {
+    
     public float speed;
 
     void Start() {

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class moveShield : MonoBehaviour {
 
-    public Transform ship;
+    public Transform shipTransform;
 
     void Update() {
         this.transform.position = new Vector3(
-            ship.position.x,
-            ship.position.y + 0.2f,
-            ship.position.z
+            shipTransform.position.x,
+            shipTransform.position.y + 0.2f,
+            shipTransform.position.z
         );
 
-        this.transform.rotation = this.ship.rotation;
+        this.transform.rotation = this.shipTransform.rotation;
     }
 }

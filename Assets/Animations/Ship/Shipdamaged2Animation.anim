@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShipAnimation
+  m_Name: Shipdamaged2Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,16 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 4906354948431561766, guid: ee5fb49cb88ff03018d7e07f7640fabd,
+      value: {fileID: 6951399287216315761, guid: ee5fb49cb88ff03018d7e07f7640fabd,
         type: 3}
     - time: 0.05
-      value: {fileID: -2109323135279189035, guid: ee5fb49cb88ff03018d7e07f7640fabd,
+      value: {fileID: -1103446588172472582, guid: ee5fb49cb88ff03018d7e07f7640fabd,
         type: 3}
     - time: 0.1
-      value: {fileID: 1040969090234884334, guid: ee5fb49cb88ff03018d7e07f7640fabd,
+      value: {fileID: -1842624427068795547, guid: ee5fb49cb88ff03018d7e07f7640fabd,
         type: 3}
     - time: 0.15
-      value: {fileID: -2109323135279189035, guid: ee5fb49cb88ff03018d7e07f7640fabd,
+      value: {fileID: 6951399287216315761, guid: ee5fb49cb88ff03018d7e07f7640fabd,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -50,10 +50,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 4906354948431561766, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
-    - {fileID: -2109323135279189035, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
-    - {fileID: 1040969090234884334, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
-    - {fileID: -2109323135279189035, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
+    - {fileID: 6951399287216315761, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
+    - {fileID: -1103446588172472582, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
+    - {fileID: -1842624427068795547, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
+    - {fileID: 6951399287216315761, guid: ee5fb49cb88ff03018d7e07f7640fabd, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

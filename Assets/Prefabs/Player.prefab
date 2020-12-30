@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 975414071737737549}
   - component: {fileID: 975414071737737548}
   - component: {fileID: 3364166235420344140}
+  - component: {fileID: 2149655034120595127}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -162,6 +163,19 @@ MonoBehaviour:
     type: 3}
   green_sprite: {fileID: -476560682929659975, guid: ee5fb49cb88ff03018d7e07f7640fabd,
     type: 3}
+--- !u!114 &2149655034120595127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975414071737737536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c854f9b83c62d1c7d9db08f5279e4d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipAnimator: {fileID: 2140103597}
 --- !u!1 &975414071829769004
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,10 +186,10 @@ GameObject:
   m_Component:
   - component: {fileID: 975414071829769003}
   - component: {fileID: 975414071829769001}
-  - component: {fileID: 975414071829769002}
+  - component: {fileID: 2140103597}
   - component: {fileID: 975414071829769015}
-  - component: {fileID: 975414071829769000}
   - component: {fileID: 5515793421908947561}
+  - component: {fileID: 975414071829769000}
   - component: {fileID: 7194364050133204497}
   m_Layer: 0
   m_Name: Ship
@@ -249,7 +263,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &975414071829769002
+--- !u!95 &2140103597
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -259,7 +273,7 @@ Animator:
   m_GameObject: {fileID: 975414071829769004}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fa5e9d25e37e3976eb972e2b64a91541, type: 2}
+  m_Controller: {fileID: 9100000, guid: 36b678e0a7fec82e5bc5a6f6d4a5c2b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -289,20 +303,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &975414071829769000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975414071829769004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4a3e47aef1dd737821a4c0a6bb6a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  tilt_angle: 25
 --- !u!61 &5515793421908947561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -329,6 +329,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &975414071829769000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975414071829769004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4a3e47aef1dd737821a4c0a6bb6a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  tilt_angle: 25
 --- !u!114 &7194364050133204497
 MonoBehaviour:
   m_ObjectHideFlags: 0

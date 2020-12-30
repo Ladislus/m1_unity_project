@@ -52,4 +52,8 @@ public class SoundManager : MonoBehaviour {
     public void playClick() {
         playClip(this.click);
     }
+
+    public void playDamage() {
+        playClip(this.damage);
+    }
 }

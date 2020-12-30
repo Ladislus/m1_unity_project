@@ -71,6 +71,33 @@ TextureImporter:
   - first:
       213: 5869174506232231079
     second: alien_green
+  - first:
+      213: -813631640290659986
+    second: spacehip2_1
+  - first:
+      213: 1072491484645271461
+    second: spaceship2_2
+  - first:
+      213: -4004770354017417081
+    second: spaceship2_3
+  - first:
+      213: 6951399287216315761
+    second: spaceship3_1
+  - first:
+      213: -1103446588172472582
+    second: spaceship3_2
+  - first:
+      213: -1842624427068795547
+    second: spaceship3_3
+  - first:
+      213: 4846675598573352484
+    second: spaceship4_1
+  - first:
+      213: -4115748872089026214
+    second: spaceship4_2
+  - first:
+      213: 9102596475041888923
+    second: spaceship4_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -599,7 +626,7 @@ TextureImporter:
         width: 93
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -620,7 +647,7 @@ TextureImporter:
         width: 82
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -641,7 +668,7 @@ TextureImporter:
         width: 103
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -662,7 +689,7 @@ TextureImporter:
         width: 104
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -670,6 +697,195 @@ TextureImporter:
       bones: []
       spriteID: 7a430c00e1f737150800000000000000
       internalID: 5869174506232231079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spacehip2_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 772
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61f47e755665b4f0800000000000000
+      internalID: -813631640290659986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship2_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 649
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7a9eea25142ee00800000000000000
+      internalID: 1072491484645271461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship2_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 532
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788c6c9c4923c68c0800000000000000
+      internalID: -4004770354017417081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship3_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 772
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d9e6652d4587060800000000000000
+      internalID: 6951399287216315761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship3_2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 649
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afeec53ac25cfa0f0800000000000000
+      internalID: -1103446588172472582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship3_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 532
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5655b12a8dead66e0800000000000000
+      internalID: -1842624427068795547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship4_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 771
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426b48237c9d24340800000000000000
+      internalID: 4846675598573352484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship4_2
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 648
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a514b6ef43ce1e6c0800000000000000
+      internalID: -4115748872089026214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship4_3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 531
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a3894344be25e70800000000000000
+      internalID: 9102596475041888923
       vertices: []
       indices: 
       edges: []

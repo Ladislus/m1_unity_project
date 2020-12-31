@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8810441118995311499, guid: bb3fe07a633c259c69795f7048fb5056,
         type: 3}
       propertyPath: m_Name
-      value: GreenBullet
+      value: GreenBullet Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8810441118995311502, guid: bb3fe07a633c259c69795f7048fb5056,
         type: 3}

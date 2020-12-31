@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2323254420123859697, guid: 5498fe35d2d479ed2a3584543d86e6b6,
         type: 3}
       propertyPath: m_Name
-      value: GreenLaser
+      value: GreenLaser Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2323254420123859706, guid: 5498fe35d2d479ed2a3584543d86e6b6,
         type: 3}

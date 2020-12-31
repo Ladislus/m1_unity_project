@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8660369487438248810}
   - component: {fileID: 1050289130}
   - component: {fileID: 1050289131}
+  - component: {fileID: 3588526682832609956}
   m_Layer: 0
   m_Name: SmallAsteroid
   m_TagString: Asteroid
@@ -181,3 +182,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 5
   spriteRenderer: {fileID: 8660369487438248855}
+--- !u!114 &3588526682832609956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660369487438248808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74781996314f9d910a7f5ea6df65a606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutScript: {fileID: 1050289131}
+  collider: {fileID: 8660369487438248853}
+  rigidbody: {fileID: 8660369487438248852}

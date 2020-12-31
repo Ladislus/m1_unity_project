@@ -31,14 +31,14 @@ public class GunFactory : MonoBehaviour {
     }
 
     private MachineGun getMG(Transform transform, SPColor color, GameObject prefab) {
-        return new MachineGun(transform, 0.3f, 1.0f, 1.5f, color, prefab);
+        return new MachineGun(transform, new Vector2(0f, 5f), 0.3f, 1.0f, 1.5f, color, prefab);
     }
 
     private LaserGun getLG(Transform transform, SPColor color, GameObject prefab) {
-        return new LaserGun(transform, 0.6f, 1.2f, 1.7f, color, prefab);
+        return new LaserGun(transform, new Vector2(0f, 15f), 0.6f, 1.2f, 1.7f, color, prefab);
     }
 
     private IonGun getIG(Transform transform, SPColor color, GameObject prefab) {
-        return new IonGun(transform, 0.15f, 0.8f, 0.1f, color, prefab);
+        return new IonGun(transform, new Vector2(2f, 5f), 0.2f, 0.8f, 0.1f, color, prefab);
     }
 }

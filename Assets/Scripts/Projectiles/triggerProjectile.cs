@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class triggerShip : MonoBehaviour {
+public class triggerProjectile : MonoBehaviour {
 
     public Collider2D collider;
     public fadeOut fadeOutScript;
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Asteroid" || other.tag == "Alien") {
+        if (other.tag == "Alien" || other.tag == "Asteroid") {
             this.collider.enabled = false;
             this.fadeOutScript.enabled = true;
         }

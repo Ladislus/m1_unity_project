@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2323254420123859708}
   - component: {fileID: 2323254420123859711}
   - component: {fileID: 2323254420123859710}
+  - component: {fileID: -8815303634612957674}
+  - component: {fileID: 8293807545614912367}
   m_Layer: 0
   m_Name: BlueLaser
   m_TagString: Projectile
@@ -144,3 +146,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52012f0ecda1579c8b9c747346be68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8815303634612957674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323254420123859697}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93023515c120d418bbe70d20134c542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 10
+  spriteRenderer: {fileID: 2323254420123859709}
+--- !u!114 &8293807545614912367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323254420123859697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55ab591b41eac69a8d5dfe9e4244410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 2323254420123859708}
+  fadeOutScript: {fileID: -8815303634612957674}

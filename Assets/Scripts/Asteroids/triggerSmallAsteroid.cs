@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class triggerShip : MonoBehaviour {
+public class triggerSmallAsteroid : MonoBehaviour {
 
-    public Collider2D collider;
     public fadeOut fadeOutScript;
+    public Collider2D collider;
+    public Rigidbody2D rigidbody;
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Asteroid" || other.tag == "Alien") {
+        if (other.tag == "Projectile") {
             this.collider.enabled = false;
+            this.rigidbody.velocity = Vector2.zero;
             this.fadeOutScript.enabled = true;
         }
     }

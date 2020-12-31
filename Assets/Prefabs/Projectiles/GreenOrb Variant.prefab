@@ -71,7 +71,17 @@ PrefabInstance:
     - target: {fileID: 3043028722325884229, guid: e1937b38d150e539f8ee7505352352a7,
         type: 3}
       propertyPath: m_Name
-      value: GreenOrb
+      value: GreenOrb Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530058449672452001, guid: e1937b38d150e539f8ee7505352352a7,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530058449672452001, guid: e1937b38d150e539f8ee7505352352a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1937b38d150e539f8ee7505352352a7, type: 3}

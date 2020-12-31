@@ -10,6 +10,7 @@ TagManager:
   - Ship
   - Shield
   - Alien
+  - Projectile
   layers:
   - Default
   - TransparentFX

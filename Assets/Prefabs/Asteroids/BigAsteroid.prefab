@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7604155883280764401}
   - component: {fileID: 584700964}
   - component: {fileID: 584700965}
+  - component: {fileID: 785104114723434340}
   m_Layer: 0
   m_Name: BigAsteroid
   m_TagString: Asteroid
@@ -165,9 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444291826f5332faa48c49994de10f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutScript: {fileID: 584700965}
-  collider: {fileID: 733356542252497646}
-  rigidbody: {fileID: 1582960300364744618}
+  lifeAsteroid: {fileID: 785104114723434340}
 --- !u!114 &584700965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +181,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 5
   spriteRenderer: {fileID: 4952351079998739146}
+--- !u!114 &785104114723434340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607415480301851495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c52d459e0d628a6b9e6c84bef4ecc22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutScript: {fileID: 584700965}
+  collider: {fileID: 733356542252497646}
+  rigidbody: {fileID: 1582960300364744618}
+  asteroidEvent:
+    m_PersistentCalls:
+      m_Calls: []

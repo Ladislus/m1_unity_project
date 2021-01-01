@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4359540853627835938}
   - component: {fileID: 1791186719}
   - component: {fileID: 1791186720}
+  - component: {fileID: -6537388745122126087}
   m_Layer: 0
   m_Name: MediumAsteroid
   m_TagString: Asteroid
@@ -164,9 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444291826f5332faa48c49994de10f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutScript: {fileID: 1791186720}
-  collider: {fileID: 5302476794774607876}
-  rigidbody: {fileID: 7613427616096886550}
+  lifeAsteroid: {fileID: -6537388745122126087}
 --- !u!114 &1791186720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,3 +180,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 5
   spriteRenderer: {fileID: 4685928660037056894}
+--- !u!114 &-6537388745122126087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596358324616796396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c52d459e0d628a6b9e6c84bef4ecc22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutScript: {fileID: 1791186720}
+  collider: {fileID: 5302476794774607876}
+  rigidbody: {fileID: 7613427616096886550}
+  asteroidEvent:
+    m_PersistentCalls:
+      m_Calls: []

@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour {
         this.scoreDisplay.text = "" + this.score;
     }
 
-    public void AddPoint(int points) {
+    public void AddPoints(int points) {
         this.score += points;
         this.scoreDisplay.text = "" + this.score;
     }

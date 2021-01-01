@@ -177,8 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6ed95d8a4ed94e1a3547ccfec2a9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 913337996495521014}
-  fadeOutScript: {fileID: 2028496476}
+  lifeAlien: {fileID: 2028496481}
 --- !u!114 &2028496479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,3 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 913337996495521014}
   fadeOutScript: {fileID: 2028496476}
+  alienEvent:
+    m_PersistentCalls:
+      m_Calls: []

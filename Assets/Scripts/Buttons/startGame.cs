@@ -13,7 +13,7 @@ public class startGame : MonoBehaviour {
     }
 
     public void OnClick() {
-        this.soundManager.playSound(SoundManager.CLICK);
+        this.soundManager.playSound(Sounds.CLICK);
         this.fader.fadeOutToLevel("Game");
     }
 }

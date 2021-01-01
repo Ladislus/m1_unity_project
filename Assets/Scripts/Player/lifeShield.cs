@@ -23,9 +23,8 @@ public class lifeShield : MonoBehaviour {
             this.fadeOutScript.enabled = true;
             this.shipCollider.enabled = true;
         } else {
-            this.soundManager.playSound(SoundManager.DAMAGE);
             this.shipAnimator.SetInteger("Life", --this.lifePoints);
         }
+        this.soundManager.playSound(Sounds.DAMAGE);
     }
-
 }

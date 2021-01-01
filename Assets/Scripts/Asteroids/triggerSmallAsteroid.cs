@@ -13,6 +13,7 @@ public class triggerSmallAsteroid : MonoBehaviour {
             this.collider.enabled = false;
             this.rigidbody.velocity = Vector2.zero;
             this.fadeOutScript.enabled = true;
+            GameObject.FindWithTag("GameController").GetComponent<SoundManager>().playSound(Sounds.EXPLOSION);
         }
     }
 }

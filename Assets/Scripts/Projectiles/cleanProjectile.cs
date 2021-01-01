@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class cleanProjectile : MonoBehaviour {
     
+    public SpriteRenderer spriteRenderer;
+
     private float height;
     private float width;
 
@@ -18,8 +20,8 @@ public class cleanProjectile : MonoBehaviour {
         this.left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         this.right = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
 
-        this.height = GetComponent<SpriteRenderer>().bounds.size.y;
-        this.width = GetComponent<SpriteRenderer>().bounds.size.x;
+        this.height = this.spriteRenderer.bounds.size.y;
+        this.width = this.spriteRenderer.bounds.size.x;
     }
 
     void Update() {

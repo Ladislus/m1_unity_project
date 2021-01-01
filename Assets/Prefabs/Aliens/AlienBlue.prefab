@@ -12,6 +12,12 @@ GameObject:
   - component: {fileID: 913337996495521008}
   - component: {fileID: 913337996495521015}
   - component: {fileID: 913337996495521014}
+  - component: {fileID: 2028496476}
+  - component: {fileID: 2028496477}
+  - component: {fileID: 2028496478}
+  - component: {fileID: 2028496479}
+  - component: {fileID: 2028496480}
+  - component: {fileID: 2028496481}
   m_Layer: 0
   m_Name: AlienBlue
   m_TagString: Alien
@@ -26,13 +32,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913337996495521012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &913337996495521008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -131,3 +137,85 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82, y: 0.84}
   m_EdgeRadius: 0
+--- !u!114 &2028496476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913337996495521012}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93023515c120d418bbe70d20134c542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 5
+  spriteRenderer: {fileID: 913337996495521008}
+--- !u!114 &2028496477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913337996495521012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d593d5dd5edde95ebdbca60bf186616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 0, y: 5}
+  rigidBody: {fileID: 913337996495521015}
+--- !u!114 &2028496478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913337996495521012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6ed95d8a4ed94e1a3547ccfec2a9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 913337996495521014}
+  fadeOutScript: {fileID: 2028496476}
+--- !u!114 &2028496479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913337996495521012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806b1a0adf9b478d89f8f11b935adc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2028496480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913337996495521012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f83ace8aaf99988ca1a77888e297063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnField: 10
+  spriteRenderer: {fileID: 913337996495521008}
+--- !u!114 &2028496481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913337996495521012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5989fb5abbd68e018a5cbef45c642cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 913337996495521014}
+  fadeOutScript: {fileID: 2028496476}

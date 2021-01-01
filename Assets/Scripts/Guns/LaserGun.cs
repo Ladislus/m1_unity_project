@@ -6,8 +6,8 @@ public class LaserGun : Gun {
     public LaserGun(Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab)
     : base(transform, speed, cooldown, minDamages, maxDamages, color, prefab) {}
 
-    public override void shoot() {
-        base.shoot();
-        this.soundManager.playSound(SoundManager.LASERGUN);
+    public override void shoot(bool isEnemy) {
+        base.shoot(isEnemy);
+        this.soundManager.playSound(Sounds.LASERGUN);
     }
 }

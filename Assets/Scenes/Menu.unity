@@ -1530,26 +1530,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975414071829769003, guid: 3b05e2a111c8d9acba595427a8fab5e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 975414071829769003, guid: 3b05e2a111c8d9acba595427a8fab5e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 975414071829769003, guid: 3b05e2a111c8d9acba595427a8fab5e7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2149655034120595127, guid: 3b05e2a111c8d9acba595427a8fab5e7,
-        type: 3}
-      propertyPath: soundManager
-      value: 
-      objectReference: {fileID: 933463438}
     - target: {fileID: 3364166235420344140, guid: 3b05e2a111c8d9acba595427a8fab5e7,
         type: 3}
       propertyPath: m_Enabled

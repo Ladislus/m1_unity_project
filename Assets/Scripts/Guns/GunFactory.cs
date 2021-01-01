@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Guns { MACHINEGUN, LASERGUN, IONGUN }
+
 public class GunFactory : MonoBehaviour {
 
     public GameObject blueOrb;
@@ -11,20 +13,16 @@ public class GunFactory : MonoBehaviour {
     public GameObject blueLaser;
     public GameObject greenLaser;
 
-    public const int MACHINEGUN = 0;
-    public const int LASERGUN = 1;
-    public const int IONGUN = 2;
-
-    public Gun make(int gunType, Transform transform, SPColor color) {
+    public Gun make(Guns gunType, Transform transform, SPColor color) {
         switch (gunType) {
-            case MACHINEGUN:
+            case Guns.MACHINEGUN:
                 if (color == SPColor.Blue) return getMG(transform, color, this.blueBullet);
                 return getMG(transform, color, this.greenBullet);
-            case LASERGUN:
+            case Guns.LASERGUN:
                 if (color == SPColor.Blue) return getLG(transform, color, this.blueLaser);
                 return getLG(transform, color, this.greenLaser);
             default:
-            case IONGUN:
+            case Guns.IONGUN:
                 if (color == SPColor.Blue) return getIG(transform, color, this.blueOrb);
                 return getIG(transform, color, this.greenOrb);
         }

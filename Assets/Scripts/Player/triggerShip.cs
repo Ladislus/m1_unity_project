@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class triggerShip : MonoBehaviour {
 
-    public Collider2D collider;
-    public fadeOut fadeOutScript;
+    public lifeShip lifeShip;
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Asteroid" || other.tag == "Alien") {
-            this.collider.enabled = false;
-            this.fadeOutScript.enabled = true;
+            this.lifeShip.hit();
         }
     }
 }

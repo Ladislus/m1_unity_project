@@ -12,7 +12,7 @@ public abstract class Gun {
     private float minDamages;
     private float maxDamages;
 
-    private SPColor color;
+    public SPColor color;
 
     protected Vector2 speed;
 
@@ -47,8 +47,8 @@ public abstract class Gun {
         return false;
     }
 
-    public GameObject createProjectile() {
-        if ((this.transform.eulerAngles.z % 360) < 90 || (this.transform.eulerAngles.z % 360) > 270) {
+    public GameObject createProjectile(bool isEnemy) {
+        if (!isEnemy) {
             return GameObject.Instantiate(
                 this.prefab,
                 new Vector3(
@@ -67,24 +67,26 @@ public abstract class Gun {
                 this.prefab,
                 new Vector3(
                     this.transform.position.x,
-                    this.transform.position.y + 0.5f,
+                    this.transform.position.y - 0.5f,
                     this.transform.position.z
                 ),
                 Quaternion.Euler(
                     this.transform.eulerAngles.x,
                     this.transform.eulerAngles.y,
-                    -180
+                    180
                 )
             );
         }
     }
 
-    public virtual void shoot() {
-        GameObject projectile = createProjectile();
-        if ((this.transform.eulerAngles.z % 360) < 90 || (this.transform.eulerAngles.z % 360) > 270) {
+    public virtual void shoot(bool isEnemy) {
+        GameObject projectile = createProjectile(isEnemy);
+        if (!isEnemy) {
             projectile.GetComponent<Rigidbody2D>().velocity = this.speed;
+            projectile.AddComponent<triggerProjectile>();
         } else {
             projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(this.speed.x, -this.speed.y);
+            projectile.AddComponent<triggerEnemyProjectile>();
         }
     }
 }

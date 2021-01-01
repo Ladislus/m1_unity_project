@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8810441118995311500}
   - component: {fileID: 8810441118995311501}
   - component: {fileID: -8309322384516981631}
-  - component: {fileID: 1757502554451688395}
+  - component: {fileID: 6365326515041958642}
   m_Layer: 0
   m_Name: BlueBullet
   m_TagString: Projectile
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52012f0ecda1579c8b9c747346be68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8810441118995311502}
 --- !u!114 &-8309322384516981631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 10
   spriteRenderer: {fileID: 8810441118995311502}
---- !u!114 &1757502554451688395
+--- !u!114 &6365326515041958642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,8 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8810441118995311499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b55ab591b41eac69a8d5dfe9e4244410, type: 3}
+  m_Script: {fileID: 11500000, guid: f574ac5199742f58fa9323f71890bcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 8810441118995311503}
-  fadeOutScript: {fileID: -8309322384516981631}
+  color: 0

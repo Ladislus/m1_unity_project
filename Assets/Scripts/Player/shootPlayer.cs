@@ -10,12 +10,12 @@ public class shootPlayer : MonoBehaviour {
 
     void Awake() {
         this.gunFactory = GameObject.FindWithTag("GameController").GetComponent<GunFactory>();
-        this.gun = this.gunFactory.make(GunFactory.IONGUN, this.transform, SPColor.Blue);
+        this.gun = this.gunFactory.make(Guns.IONGUN, this.transform, SPColor.Blue);
     }
 
     void Update() {
         if (this.gun.isReady(Time.deltaTime)) {
-            this.gun.shoot();
+            this.gun.shoot(false);
         }
     }
 }

@@ -153,6 +153,7 @@ MonoBehaviour:
   spinSpeed: 10
   respawnField: 20
   rigidBody: {fileID: 8660369487438248852}
+  spriteRenderer: {fileID: 8660369487438248855}
 --- !u!114 &1050289130
 MonoBehaviour:
   m_ObjectHideFlags: 0

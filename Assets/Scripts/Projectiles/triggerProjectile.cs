@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class triggerProjectile : MonoBehaviour {
 
-    public Collider2D collider;
-    public fadeOut fadeOutScript;
-
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Alien" || other.tag == "Asteroid") {
-            this.collider.enabled = false;
-            this.fadeOutScript.enabled = true;
+            if (other.tag == "Alien") {
+                other.gameObject.GetComponent<lifeAlien>().hit();
+            }
+            this.GetComponent<Collider2D>().enabled = false;
+            this.GetComponent<fadeOut>().enabled = true;
         }
     }
 }

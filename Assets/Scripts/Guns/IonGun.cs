@@ -6,8 +6,8 @@ public class IonGun : Gun {
 
     private const float zone = 5f;
 
-    public IonGun(Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab)
-    : base(transform, speed, cooldown, minDamages, maxDamages, color, prefab) {}
+    public IonGun(SoundManager soundManager, Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab)
+    : base(soundManager, transform, speed, cooldown, minDamages, maxDamages, color, prefab) {}
 
     public override void shoot(bool isEnemy) {
         GameObject projectile = createProjectile(isEnemy);

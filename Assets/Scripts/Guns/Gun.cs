@@ -20,7 +20,7 @@ public abstract class Gun {
 
     protected SoundManager soundManager;
 
-    public Gun(Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab) {
+    public Gun(SoundManager soundManager, Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab) {
         this.cooldown = cooldown;
         this.cooldownStatus = cooldown;
 
@@ -35,7 +35,7 @@ public abstract class Gun {
 
         this.color = color;
 
-        this.soundManager = GameObject.FindWithTag("GameController").GetComponent<SoundManager>();
+        this.soundManager = soundManager;
     }
 
     public bool isReady(float elapsedTime) {

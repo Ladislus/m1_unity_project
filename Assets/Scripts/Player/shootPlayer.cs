@@ -18,4 +18,12 @@ public class shootPlayer : MonoBehaviour {
             this.gun.shoot(false);
         }
     }
+
+    public void setGun(Guns newGun) {
+        SPColor randomColor;
+        if (Random.Range(0f, 1f) < 0.5f) randomColor = SPColor.Blue;
+        else randomColor = SPColor.Green;
+
+        this.gun = this.gunFactory.make(newGun, this.transform, randomColor);
+    }
 }

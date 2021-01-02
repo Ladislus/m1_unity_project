@@ -433,5 +433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ddd2d3f08283a418930aa21cc2577b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 0}
   collider: {fileID: 5515793421908947561}
   fadeOutScript: {fileID: 7655325797483057250}

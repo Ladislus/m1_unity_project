@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5989fb5abbd68e018a5cbef45c642cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 1372370107407457870}
+  alienCollider: {fileID: 1372370107407457870}
   fadeOutScript: {fileID: 1057159398}
   alienEvent:
     m_PersistentCalls:

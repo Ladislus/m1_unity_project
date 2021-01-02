@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class shootPlayer : MonoBehaviour {
 
-    private GunFactory gunFactory;
-
     private Gun gun;
 
-    void Awake() {
-        this.gunFactory = GameObject.FindWithTag("GameController").GetComponent<GunFactory>();
-        this.gun = this.gunFactory.make(Guns.MACHINEGUN, this.transform, SPColor.Blue);
+    void Start() {
+        this.gun = GunFactory.Instance.make(Guns.MACHINEGUN, this.transform, SPColor.Blue);
     }
 
     void Update() {
@@ -24,6 +21,6 @@ public class shootPlayer : MonoBehaviour {
         if (Random.Range(0f, 1f) < 0.5f) randomColor = SPColor.Blue;
         else randomColor = SPColor.Green;
 
-        this.gun = this.gunFactory.make(newGun, this.transform, randomColor);
+        this.gun = GunFactory.Instance.make(newGun, this.transform, randomColor);
     }
 }

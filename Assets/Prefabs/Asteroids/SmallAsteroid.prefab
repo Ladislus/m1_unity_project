@@ -182,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutScript: {fileID: 1050289131}
-  collider: {fileID: 2125336661}
-  rigidbody: {fileID: 8660369487438248852}
+  asteroidCollider: {fileID: 2125336661}
+  rigidBody: {fileID: 8660369487438248852}
   asteroidEvent:
     m_PersistentCalls:
       m_Calls: []

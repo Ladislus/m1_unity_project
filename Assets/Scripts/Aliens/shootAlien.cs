@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class shootAlien : MonoBehaviour {
 
-    private GunFactory gunFactory;
-
     private Gun gun;
 
-    void Awake() {
-        this.gunFactory = GameObject.FindWithTag("GameController").GetComponent<GunFactory>();
-
+    void Start() {
         Guns randomGun = (Guns) Random.Range(0, System.Enum.GetNames(typeof(Guns)).Length);
 
         SPColor randomColor;
         if (Random.Range(0f, 1f) < 0.5f) { randomColor = SPColor.Green; }
         else randomColor = SPColor.Blue;
 
-        this.gun = this.gunFactory.make(randomGun, this.transform, randomColor);
+        this.gun = GunFactory.Instance.make(randomGun, this.transform, randomColor);
     }
 
     void Update() {

@@ -434,5 +434,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 0}
-  collider: {fileID: 5515793421908947561}
+  shipCollider: {fileID: 5515793421908947561}
   fadeOutScript: {fileID: 7655325797483057250}

@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4d159319641f8b8be7890b0def552f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 6750011993586988679}
+  powerupCollider: {fileID: 6750011993586988679}
   fadeOutScript: {fileID: 6750011993586988684}
   gun: 2
 --- !u!114 &6750011993586988681

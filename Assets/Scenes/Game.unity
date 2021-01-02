@@ -341,8 +341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnChance: 50
-  cooldown: 3
-  maxEnemy: 4
+  cooldown: 2
+  maxEnemy: 6
   alienPrefabs:
   - {fileID: 913337996495521012, guid: 5b9d9c4c631b90ce09fbd43e948ed71b, type: 3}
   - {fileID: 8800506746348015957, guid: 10d6ee45252efb45f9f8a326521a1a75, type: 3}

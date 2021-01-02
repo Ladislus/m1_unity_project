@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 8412144907087934505}
   - component: {fileID: 4952351079998739146}
   - component: {fileID: 1582960300364744618}
-  - component: {fileID: 733356542252497646}
   - component: {fileID: 7604155883280764401}
   - component: {fileID: 584700964}
   - component: {fileID: 584700965}
   - component: {fileID: 785104114723434340}
+  - component: {fileID: 1536952839}
   m_Layer: 0
   m_Name: BigAsteroid
   m_TagString: Asteroid
@@ -109,32 +109,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &733356542252497646
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7607415480301851495}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.19, y: 0.96}
-    newSize: {x: 1.19, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2, y: 0.98}
-  m_EdgeRadius: 0
 --- !u!114 &7604155883280764401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,8 +168,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutScript: {fileID: 584700965}
-  collider: {fileID: 733356542252497646}
+  collider: {fileID: 1536952839}
   rigidbody: {fileID: 1582960300364744618}
   asteroidEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!60 &1536952839
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607415480301851495}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.19, y: 0.96}
+    newSize: {x: 1.19, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.49499997, y: -0.19}
+      - {x: 0.515, y: -0.099999994}
+      - {x: 0.59499997, y: 0.14}
+      - {x: 0.59499997, y: 0.32999998}
+      - {x: 0.555, y: 0.35}
+      - {x: 0.275, y: 0.44}
+      - {x: 0.155, y: 0.48}
+      - {x: -0.095, y: 0.48}
+      - {x: -0.155, y: 0.47}
+      - {x: -0.405, y: 0.42999998}
+      - {x: -0.42499998, y: 0.41}
+      - {x: -0.525, y: 0.22999999}
+      - {x: -0.59499997, y: 0.089999996}
+      - {x: -0.59499997, y: -0.08}
+      - {x: -0.565, y: -0.28}
+      - {x: -0.465, y: -0.35999998}
+      - {x: -0.305, y: -0.48}
+      - {x: -0.21499999, y: -0.48}
+      - {x: -0.114999995, y: -0.39}
+      - {x: 0.015, y: -0.32999998}
+      - {x: 0.355, y: -0.25}

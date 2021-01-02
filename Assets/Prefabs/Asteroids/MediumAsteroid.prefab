@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2462472754711315655}
   - component: {fileID: 4685928660037056894}
-  - component: {fileID: 5302476794774607876}
   - component: {fileID: 7613427616096886550}
   - component: {fileID: 4359540853627835938}
   - component: {fileID: 1791186719}
   - component: {fileID: 1791186720}
   - component: {fileID: -6537388745122126087}
+  - component: {fileID: 69702680}
   m_Layer: 0
   m_Name: MediumAsteroid
   m_TagString: Asteroid
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5302476794774607876
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596358324616796396}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.43, y: 0.41}
-    newSize: {x: 0.43, y: 0.41}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.43, y: 0.41}
-  m_EdgeRadius: 0
 --- !u!50 &7613427616096886550
 Rigidbody2D:
   serializedVersion: 4
@@ -193,8 +167,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutScript: {fileID: 1791186720}
-  collider: {fileID: 5302476794774607876}
+  collider: {fileID: 69702680}
   rigidbody: {fileID: 7613427616096886550}
   asteroidEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!58 &69702680
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596358324616796396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.22

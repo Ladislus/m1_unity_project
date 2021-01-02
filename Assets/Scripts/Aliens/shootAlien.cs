@@ -12,7 +12,10 @@ public class shootAlien : MonoBehaviour {
         this.gunFactory = GameObject.FindWithTag("GameController").GetComponent<GunFactory>();
 
         Guns randomGun = (Guns) Random.Range(0, System.Enum.GetNames(typeof(Guns)).Length);
-        SPColor randomColor = (SPColor) Random.Range(0, System.Enum.GetNames(typeof(SPColor)).Length);
+
+        SPColor randomColor;
+        if (Random.Range(0f, 1f) < 0.5f) { randomColor = SPColor.Green; }
+        else randomColor = SPColor.Blue;
 
         this.gun = this.gunFactory.make(randomGun, this.transform, randomColor);
     }

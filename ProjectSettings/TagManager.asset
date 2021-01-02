@@ -12,6 +12,7 @@ TagManager:
   - Alien
   - Projectile
   - Highscore
+  - NewHighscore
   layers:
   - Default
   - TransparentFX

@@ -53,7 +53,7 @@ public class moveAsteroid : MonoBehaviour {
             );
 
             this.speed = Random.Range(this.minSpeed, this.maxSpeed);
-            this.rigidBody.velocity = new Vector2(0, -this.speed);
+            this.rigidBody.velocity = new Vector2(Random.Range(-0.5f, 0.5f), -this.speed);
 
             this.selectSpinRotation();
         }

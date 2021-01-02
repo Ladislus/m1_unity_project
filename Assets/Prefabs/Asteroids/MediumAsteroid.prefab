@@ -150,7 +150,7 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 7
   spinSpeed: 7
-  respawnField: 25
+  respawnField: 20
   rigidBody: {fileID: 7613427616096886550}
   spriteRenderer: {fileID: 4685928660037056894}
 --- !u!114 &1791186719

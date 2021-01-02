@@ -13,15 +13,14 @@ public class movePlayer : MonoBehaviour {
 
     private float smooth = 5.0f;
 
-    private Rigidbody2D rigidBody;
+    public Rigidbody2D rigidBody;
+    public SpriteRenderer spriteRenderer;
 
     void Start() {
         this.left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         this.right = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
 
-        this.width = GetComponent<SpriteRenderer>().bounds.size.x;
-
-        this.rigidBody = GetComponent<Rigidbody2D>();
+        this.width = this.spriteRenderer.bounds.size.x;
     }
 
     // Update is called once per frame

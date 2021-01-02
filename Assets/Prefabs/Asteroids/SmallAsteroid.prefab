@@ -152,7 +152,7 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 10
   spinSpeed: 10
-  respawnField: 20
+  respawnField: 25
   rigidBody: {fileID: 8660369487438248852}
   spriteRenderer: {fileID: 8660369487438248855}
 --- !u!114 &1050289130
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444291826f5332faa48c49994de10f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeAsteroid: {fileID: 0}
+  lifeAsteroid: {fileID: 3029841528297907995}
 --- !u!114 &1050289131
 MonoBehaviour:
   m_ObjectHideFlags: 0

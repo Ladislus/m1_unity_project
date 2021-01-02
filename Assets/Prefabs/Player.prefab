@@ -380,6 +380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tiltAngle: 25
+  rigidBody: {fileID: 975414071829769015}
+  spriteRenderer: {fileID: 975414071829769001}
 --- !u!114 &7194364050133204497
 MonoBehaviour:
   m_ObjectHideFlags: 0

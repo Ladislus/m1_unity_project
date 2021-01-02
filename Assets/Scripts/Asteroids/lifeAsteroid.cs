@@ -15,6 +15,7 @@ public class lifeAsteroid : MonoBehaviour {
         this.collider.enabled = false;
         this.rigidbody.velocity = Vector2.zero;
         this.fadeOutScript.enabled = true;
-        this.asteroidEvent.Invoke();
+        if (this.asteroidEvent != null) this.asteroidEvent.Invoke();
+        else Debug.LogWarning("AsteroidEvent is null");
     }
 }

@@ -9,6 +9,9 @@ public class triggerEnemyProjectile : MonoBehaviour {
             if (other.tag == "Shield" && other.gameObject.GetComponent<colorShield>().color != this.GetComponent<colorProjectile>().color) {
                 other.gameObject.GetComponent<lifeShield>().hit();
             }
+            if (other.tag == "Ship") {
+                other.gameObject.GetComponent<lifeShip>().hit();
+            }
             this.GetComponent<Collider2D>().enabled = false;
             this.GetComponent<fadeOut>().enabled = true;
         }

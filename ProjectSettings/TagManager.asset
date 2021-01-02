@@ -11,6 +11,7 @@ TagManager:
   - Shield
   - Alien
   - Projectile
+  - Highscore
   layers:
   - Default
   - TransparentFX

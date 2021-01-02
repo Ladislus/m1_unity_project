@@ -38,9 +38,27 @@ public class AlienManager : MonoBehaviour {
         this.scoreManager.startGame();
     }
 
-    void Update() {}
+    void Update() {
+        if (this.enemyCount < maxEnemy) {
+            if (cooldownStatus <= 0f && (Random.Range(0, 100 + (20 * this.enemyCount)) <= this.spawnChance)) {
+                this.cooldownStatus = this.cooldown;
+                spawnNew();
+            } else {
+                this.cooldownStatus -= Time.deltaTime;
+            }    
+        }
+    }
 
-    void spawnNew() {}
+    void spawnNew() {
+        ++this.enemyCount;
+        int selectedPrefab = Random.Range(0, this.alienPrefabs.Count);
+        GameObject alien = GameObject.Instantiate(
+            this.alienPrefabs[selectedPrefab],
+            new Vector3(0, bottom - 10f, 0),
+            Quaternion.identity
+        );
+        alien.GetComponent<lifeAlien>().alienEvent = this.alienEvent;
+    }
 
     void alienDied() {
         --this.enemyCount;

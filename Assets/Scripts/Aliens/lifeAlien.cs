@@ -13,6 +13,7 @@ public class lifeAlien : MonoBehaviour {
     public void hit() {
         this.collider.enabled = false;
         this.fadeOutScript.enabled = true;
-        this.alienEvent.Invoke();
+        if (this.alienEvent != null) this.alienEvent.Invoke();
+        else Debug.LogWarning("AlienEvent is null");
     }
 }

@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour {
         else Destroy(this); 
 
         this.highscore = PlayerPrefs.GetInt("highscore", 0);
-        GameObject.FindWithTag("Score").GetComponent<Text>().text = "" + this.highscore; 
+        GameObject.FindWithTag("Highscore").GetComponent<Text>().text = "" + this.highscore; 
     }
 
     public void startGame() {
@@ -37,8 +37,9 @@ public class ScoreManager : MonoBehaviour {
         if (this.score > this.highscore) {
             this.highscore = score;
             PlayerPrefs.SetInt("highscore", this.score);
-            GameObject.FindWithTag("Score").GetComponent<Text>().text = "" + this.highscore; 
         }
+        GameObject.FindWithTag("Score").GetComponent<Text>().text = "" + this.score; 
+        GameObject.FindWithTag("Highscore").GetComponent<Text>().text = "" + this.highscore; 
         this.score = 0;
     }
 }

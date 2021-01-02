@@ -6,8 +6,8 @@ using UnityEngine;
 public class lifeAsteroid : MonoBehaviour {
 
     public fadeOut fadeOutScript;
-    public Collider2D collider;
-    public Rigidbody2D rigidbody;
+    public new Collider2D collider;
+    public new Rigidbody2D rigidbody;
 
     public UnityEvent asteroidEvent;
 

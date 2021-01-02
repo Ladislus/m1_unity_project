@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class lifeAlien : MonoBehaviour {
 
-    public Collider2D collider;
+    public new Collider2D collider;
     public fadeOut fadeOutScript;
 
     public UnityEvent alienEvent;

@@ -6,6 +6,10 @@ public enum Guns { MACHINEGUN, LASERGUN, IONGUN }
 
 public class GunFactory : MonoBehaviour {
 
+    private static GunFactory _instance;
+
+    public static GunFactory Instance { get { return _instance; } }
+
     public GameObject blueOrb;
     public GameObject greenOrb;
     public GameObject blueBullet;
@@ -13,10 +17,11 @@ public class GunFactory : MonoBehaviour {
     public GameObject blueLaser;
     public GameObject greenLaser;
 
-    private SoundManager soundManager;
-
     void Awake() {
-        this.soundManager = this.gameObject.GetComponent<SoundManager>();
+        if (_instance == null) { 
+            _instance = this;
+            DontDestroyOnLoad(this.gameObject); 
+        } else Destroy(this);
     }
 
     public Gun make(Guns gunType, Transform transform, SPColor color) {
@@ -35,14 +40,14 @@ public class GunFactory : MonoBehaviour {
     }
 
     private MachineGun getMG(Transform transform, SPColor color, GameObject prefab) {
-        return new MachineGun(this.soundManager, transform, new Vector2(0f, 10f), 0.5f, 1.0f, 1.5f, color, prefab);
+        return new MachineGun(transform, new Vector2(0f, 10f), 0.5f, 1.0f, 1.5f, color, prefab);
     }
 
     private LaserGun getLG(Transform transform, SPColor color, GameObject prefab) {
-        return new LaserGun(this.soundManager, transform, new Vector2(0f, 20f), 0.7f, 1.2f, 1.7f, color, prefab);
+        return new LaserGun(transform, new Vector2(0f, 20f), 0.7f, 1.2f, 1.7f, color, prefab);
     }
 
     private IonGun getIG(Transform transform, SPColor color, GameObject prefab) {
-        return new IonGun(this.soundManager, transform, new Vector2(2f, 5f), 0.4f, 0.8f, 0.1f, color, prefab);
+        return new IonGun(transform, new Vector2(2f, 5f), 0.4f, 0.8f, 0.1f, color, prefab);
     }
 }

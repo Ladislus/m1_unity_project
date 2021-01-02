@@ -6,14 +6,8 @@ public class startGame : MonoBehaviour {
 
     public LevelFader fader;
 
-    private SoundManager soundManager;
-
-    void Awake() {
-        this.soundManager = GameObject.FindWithTag("GameController").GetComponent<SoundManager>();
-    }
-
     public void OnClick() {
-        this.soundManager.playSound(Sounds.CLICK);
+        SoundManager.Instance.playSound(Sounds.CLICK);
         this.fader.fadeOutToLevel("Game");
     }
 }

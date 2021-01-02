@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class lifeShip : MonoBehaviour {
-    
+
     public LevelFader fader;
 
-    public new Collider2D collider;
+    public Collider2D shipCollider;
     public fadeOut fadeOutScript;
 
     public void hit() {
-        this.collider.enabled = false;
+        this.shipCollider.enabled = false;
         this.fadeOutScript.enabled = true;
-        GameObject.FindWithTag("GameController").GetComponent<SoundManager>().playSound(Sounds.EXPLOSION);
+        SoundManager.Instance.playSound(Sounds.EXPLOSION);
         this.fader.fadeOutToLevel("End");
     }
 }

@@ -19,10 +19,6 @@ public class AlienManager : MonoBehaviour {
     public GameObject laserGunPrefab;
     public GameObject machineGunPrefab;
 
-    private GameObject gameController;
-    private SoundManager soundManager;
-    private ScoreManager scoreManager;
-
     private UnityEvent alienEvent;
 
     private int enemyCount = 0;
@@ -32,11 +28,7 @@ public class AlienManager : MonoBehaviour {
     private float left;
     private float cooldownStatus;
 
-    void Awake() {
-        this.gameController = GameObject.FindWithTag("GameController");
-        this.soundManager = this.gameController.GetComponent<SoundManager>();
-        this.scoreManager = this.gameController.GetComponent<ScoreManager>();
-        
+    void Awake() {        
         this.top = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
         this.bottom = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
         this.left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
@@ -50,7 +42,7 @@ public class AlienManager : MonoBehaviour {
     }
 
     void Start() {
-        this.scoreManager.startGame();
+        ScoreManager.Instance.startGame();
     }
 
     void Update() {
@@ -77,8 +69,8 @@ public class AlienManager : MonoBehaviour {
 
     void alienDied() {
         --this.enemyCount;
-        this.soundManager.playSound(Sounds.EXPLOSION);
-        this.scoreManager.AddPoints(100);
+        SoundManager.Instance.playSound(Sounds.EXPLOSION);
+        ScoreManager.Instance.AddPoints(100);
     }
 
     void createPowerup(GameObject prefab) {

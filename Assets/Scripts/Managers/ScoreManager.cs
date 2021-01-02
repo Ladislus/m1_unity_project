@@ -7,6 +7,8 @@ public class ScoreManager : MonoBehaviour {
 
     private static ScoreManager _instance;
 
+    public static ScoreManager Instance { get { return _instance; } }
+
     private int highscore;
     private int score = 0;
 

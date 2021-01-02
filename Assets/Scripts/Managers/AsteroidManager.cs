@@ -11,9 +11,6 @@ public class AsteroidManager : MonoBehaviour {
 
     public List<GameObject> asteroidPrefabs;
 
-    private GameObject gameController;
-    private SoundManager soundManager;
-
     private UnityEvent asteroidEvent;
 
     private int asteroidCount = 0;
@@ -21,9 +18,6 @@ public class AsteroidManager : MonoBehaviour {
     private float cooldownStatus;
 
     void Awake() {
-        this.gameController = GameObject.FindWithTag("GameController");
-        this.soundManager = this.gameController.GetComponent<SoundManager>();
-
         this.bottom = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
 
         this.cooldownStatus = this.cooldown;
@@ -56,6 +50,6 @@ public class AsteroidManager : MonoBehaviour {
 
     void asteroidDied() {
         --this.asteroidCount;
-        this.soundManager.playSound(Sounds.EXPLOSION);
+        SoundManager.Instance.playSound(Sounds.EXPLOSION);
     }
 }

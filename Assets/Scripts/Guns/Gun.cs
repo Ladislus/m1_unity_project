@@ -20,7 +20,7 @@ public abstract class Gun {
 
     protected SoundManager soundManager;
 
-    public Gun(SoundManager soundManager, Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab) {
+    public Gun(Transform transform, Vector2 speed, float cooldown, float minDamages, float maxDamages, SPColor color, GameObject prefab) {
         this.cooldown = cooldown;
         this.cooldownStatus = cooldown;
 
@@ -34,8 +34,6 @@ public abstract class Gun {
         this.speed = speed;
 
         this.color = color;
-
-        this.soundManager = soundManager;
     }
 
     public bool isReady(float elapsedTime) {

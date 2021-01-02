@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class EndManager : MonoBehaviour {
     void Awake() {
-        GameObject.FindWithTag("GameController").GetComponent<ScoreManager>().endGame();
+        ScoreManager.Instance.endGame();
     }
 }

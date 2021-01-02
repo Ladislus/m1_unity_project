@@ -23,8 +23,16 @@ public class movePlayer : MonoBehaviour {
         this.width = this.spriteRenderer.bounds.size.x;
     }
 
-    // Update is called once per frame
     void Update() {
+
+        if (Input.touchCount > 0) {
+            Debug.DrawLine(
+                this.gameObject.transform.position,
+                Input.GetTouch(0).position,
+                Color.red);
+        }
+
+
         this.rigidBody.velocity = new Vector2(this.speed * Input.GetAxis("Horizontal"), 0);
 
         Quaternion target = Quaternion.Euler(

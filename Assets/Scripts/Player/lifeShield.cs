@@ -9,13 +9,7 @@ public class lifeShield : MonoBehaviour {
     public Collider2D shieldCollider;
     public Collider2D shipCollider;
 
-    private SoundManager soundManager;
-
     private int lifePoints = 3;
-
-    void Awake() {
-        this.soundManager = GameObject.FindWithTag("GameController").GetComponent<SoundManager>();
-    }
 
     public void hit() {
         if (this.lifePoints == 0) {
@@ -25,6 +19,6 @@ public class lifeShield : MonoBehaviour {
         } else {
             this.shipAnimator.SetInteger("Life", --this.lifePoints);
         }
-        this.soundManager.playSound(Sounds.DAMAGE);
+        SoundManager.Instance.playSound(Sounds.DAMAGE);
     }
 }

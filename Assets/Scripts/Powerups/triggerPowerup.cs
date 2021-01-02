@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class triggerPowerup : MonoBehaviour {
 
-    public new Collider2D collider;
+    public Collider2D powerupCollider;
     public fadeOut fadeOutScript;
 
     public Guns gun;
@@ -16,9 +16,9 @@ public class triggerPowerup : MonoBehaviour {
             } else {
                 other.gameObject.transform.parent.gameObject.transform.GetChild(0).GetComponent<shootPlayer>().setGun(this.gun);
             }
-            this.collider.enabled = false;
+            this.powerupCollider.enabled = false;
             this.fadeOutScript.enabled = true;
-            GameObject.FindWithTag("GameController").GetComponent<SoundManager>().playSound(Sounds.POWERUP);
+            SoundManager.Instance.playSound(Sounds.POWERUP);
         }
     }
 }

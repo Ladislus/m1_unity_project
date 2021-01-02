@@ -6,6 +6,8 @@ public class cleanProjectile : MonoBehaviour {
     
     public SpriteRenderer spriteRenderer;
 
+    public float topCleanZone;
+
     private float height;
     private float width;
 
@@ -30,7 +32,7 @@ public class cleanProjectile : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         if ((this.transform.position.y + (this.height / 2) < bottom) ||
-            (this.transform.position.y - (this.width / 2) > top)) {
+            (this.transform.position.y - (this.width / 2) > top + this.topCleanZone)) {
                 Destroy(this.gameObject);
             }
     }

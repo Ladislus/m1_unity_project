@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2323254420123859709}
+  topCleanZone: 25
 --- !u!114 &-8815303634612957674
 MonoBehaviour:
   m_ObjectHideFlags: 0

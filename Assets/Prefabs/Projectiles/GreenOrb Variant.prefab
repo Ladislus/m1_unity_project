@@ -73,6 +73,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -7538467362459351936, guid: ee5fb49cb88ff03018d7e07f7640fabd,
         type: 3}
+    - target: {fileID: 3043028722325884228, guid: e1937b38d150e539f8ee7505352352a7,
+        type: 3}
+      propertyPath: topCleanZone
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3043028722325884229, guid: e1937b38d150e539f8ee7505352352a7,
         type: 3}
       propertyPath: m_Name

@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6639824268478004385, guid: 0595a8faf3d9497d18e8e15dfc6928e2,
+        type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6639824268478004386, guid: 0595a8faf3d9497d18e8e15dfc6928e2,
         type: 3}
       propertyPath: gun

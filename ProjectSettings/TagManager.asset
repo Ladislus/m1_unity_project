@@ -13,6 +13,7 @@ TagManager:
   - Projectile
   - Highscore
   - NewHighscore
+  - Powerup
   layers:
   - Default
   - TransparentFX

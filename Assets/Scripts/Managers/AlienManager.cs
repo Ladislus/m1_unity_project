@@ -9,7 +9,15 @@ public class AlienManager : MonoBehaviour {
     public float cooldown;
     public int maxEnemy;
 
+    public float spawnChanceIonGun;
+    public float spawnChanceLaserGun;
+    public float spawnChanceMachineGun;
+
     public List<GameObject> alienPrefabs;
+
+    public GameObject ionGunPrefab;
+    public GameObject laserGunPrefab;
+    public GameObject machineGunPrefab;
 
     private GameObject gameController;
     private SoundManager soundManager;
@@ -18,7 +26,10 @@ public class AlienManager : MonoBehaviour {
     private UnityEvent alienEvent;
 
     private int enemyCount = 0;
+    private float top;
     private float bottom;
+    private float right;
+    private float left;
     private float cooldownStatus;
 
     void Awake() {
@@ -26,12 +37,16 @@ public class AlienManager : MonoBehaviour {
         this.soundManager = this.gameController.GetComponent<SoundManager>();
         this.scoreManager = this.gameController.GetComponent<ScoreManager>();
         
+        this.top = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
         this.bottom = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
+        this.left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        this.right = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
 
         this.cooldownStatus = this.cooldown;
 
         this.alienEvent = new UnityEvent();
         this.alienEvent.AddListener(alienDied);
+        this.alienEvent.AddListener(spawnPowerup);
     }
 
     void Start() {
@@ -64,5 +79,24 @@ public class AlienManager : MonoBehaviour {
         --this.enemyCount;
         this.soundManager.playSound(Sounds.EXPLOSION);
         this.scoreManager.AddPoints(100);
+    }
+
+    void createPowerup(GameObject prefab) {
+        GameObject.Instantiate(
+            prefab,
+            new Vector3(
+                Random.Range(this.left + 0.5f, this.right - 0.5f),
+                this.top + 2f,
+                0
+            ),
+            Quaternion.identity
+        );
+    }
+
+    void spawnPowerup() {
+        float rand = Random.Range(0f, 100f);
+        if (rand <= this.spawnChanceIonGun) createPowerup(this.ionGunPrefab);
+        else if (rand <= (this.spawnChanceIonGun + this.spawnChanceLaserGun)) createPowerup(this.laserGunPrefab);
+        else if (rand <= (this.spawnChanceIonGun + this.spawnChanceLaserGun + this.spawnChanceMachineGun)) createPowerup(this.machineGunPrefab);
     }
 }

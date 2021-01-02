@@ -151,7 +151,7 @@ Transform:
   - {fileID: 214768730}
   - {fileID: 1975453228}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114348449 stripped
 MonoBehaviour:
@@ -343,11 +343,20 @@ MonoBehaviour:
   spawnChance: 50
   cooldown: 2
   maxEnemy: 6
+  spawnChanceIonGun: 5
+  spawnChanceLaserGun: 10
+  spawnChanceMachineGun: 10
   alienPrefabs:
   - {fileID: 913337996495521012, guid: 5b9d9c4c631b90ce09fbd43e948ed71b, type: 3}
   - {fileID: 8800506746348015957, guid: 10d6ee45252efb45f9f8a326521a1a75, type: 3}
   - {fileID: 3073662704648776015, guid: 2dfcb7ca5ceb0496b9fb9b8920b62aa3, type: 3}
   - {fileID: 1153305699451370295, guid: 1af3c26057e7b553ab0d37e2aa65292a, type: 3}
+  ionGunPrefab: {fileID: 6750011993586988676, guid: 54b059d26f691c95c99ff0db9d50231d,
+    type: 3}
+  laserGunPrefab: {fileID: 8111475101693701387, guid: ada6ec4aa67b69457977e0fb7cb0c112,
+    type: 3}
+  machineGunPrefab: {fileID: 6639824268478004396, guid: 0595a8faf3d9497d18e8e15dfc6928e2,
+    type: 3}
 --- !u!1 &757655395
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +556,7 @@ PrefabInstance:
     - target: {fileID: 975414071467167433, guid: 3b05e2a111c8d9acba595427a8fab5e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 975414071467167433, guid: 3b05e2a111c8d9acba595427a8fab5e7,
         type: 3}

@@ -1,13 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
+// Enumération des différents sons disponibles
 public enum Sounds { CLICK, DAMAGE, EXPLOSION, POWERUP, MACHINEGUN, LASERGUN, IONGUN }
 
+// Script singleton de gestion des sons
 public class SoundManager : MonoBehaviour {
 
+    // Instance singleton du manager
     private static SoundManager _instance;
 
+    // Property permettant la récupération en 
+    // readonly de l'instance du singleton
     public static SoundManager Instance { get { return _instance; } }
 
     public AudioClip music;
@@ -15,6 +19,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip click;
 
     public AudioClip damage;
+    // Liste des différents sons d'explosion disponibles
     public List<AudioClip> explosions;
 
     public AudioClip powerUp;
@@ -23,6 +28,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip laserGun;
     public AudioClip ionGun;
 
+    // Source de la musique
     public AudioSource musicSource;
 
     void Awake() {
@@ -49,6 +55,7 @@ public class SoundManager : MonoBehaviour {
                 playClip(this.damage);
                 break;
             case Sounds.EXPLOSION:
+                // Selection aléatoire d'un des sons d'explosion
                 int selected = Random.Range(0, this.explosions.Count - 1);
                 playClip(this.explosions[selected]);
                 break;

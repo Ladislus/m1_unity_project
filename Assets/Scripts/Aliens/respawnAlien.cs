@@ -1,9 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Script de réapparition des aliens lorsqu'ils
+// sortent de l'écran vers le bas
 public class respawnAlien : MonoBehaviour {
 
+    // Hauteur maximale à laquelle les
+    // aliens peuvent réapparaitre 
     public float respawnField;
 
     public SpriteRenderer spriteRenderer;
@@ -27,6 +29,8 @@ public class respawnAlien : MonoBehaviour {
     }
 
     void Update() {
+        // Si les aliens sortent de l'écran vers le base, réapparait en haut de
+        // l'écran, à une position aléatoire dans le respawnField
         if (this.transform.position.y + (this.height / 2) < this.bottom) {
             this.transform.position = new Vector3(
                 Random.Range(this.left + (this.width / 2), this.right - (this.width / 2)),

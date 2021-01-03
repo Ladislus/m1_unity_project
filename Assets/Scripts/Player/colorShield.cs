@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Script de gestion de la couleur du bouclier
 public class colorShield : MonoBehaviour {
 
     public Sprite blue_shield;
@@ -9,9 +8,12 @@ public class colorShield : MonoBehaviour {
 
     public SpriteRenderer spriteRenderer;
 
+    // Couleur du bouclier
     public SPColor color = SPColor.Blue;
 
     void Update() {
+        // Si le joueur touche l'écran avec deux doigts,
+        // change la couleur du bouclier(première frame du touché)
         if (Input.touchCount > 1 && Input.GetTouch(1).phase == TouchPhase.Began) {
             if (this.color == SPColor.Blue) {
                 this.color = SPColor.Green;

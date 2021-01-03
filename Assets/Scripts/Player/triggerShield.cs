@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Trigger du bouclier
 public class triggerShield : MonoBehaviour {
     
+    // Script de gestion de la vie du bouclier
     public lifeShield lifeShieldScript;
 
     void OnTriggerEnter2D(Collider2D other) {

@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Script de déplacement des aliens
 public class moveAlien : MonoBehaviour {
 
+    // Vitesse de déplacement des aliens 
     public Vector2 speed;
 
     public Rigidbody2D rigidBody;

@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using UnityEngine;
 
+// Script de gestion de la vie des astéroids
 public class lifeAsteroid : MonoBehaviour {
 
     public fadeOut fadeOutScript;
@@ -12,6 +11,8 @@ public class lifeAsteroid : MonoBehaviour {
     public UnityEvent asteroidEvent;
 
     public void hit() {
+        // Désactivation du collider, immobilisation
+        // de l'astéroid, puis fadeOut
         this.asteroidCollider.enabled = false;
         this.rigidBody.velocity = Vector2.zero;
         this.fadeOutScript.enabled = true;

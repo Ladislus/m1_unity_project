@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class cleanPowerup : MonoBehaviour {
 
@@ -16,6 +14,7 @@ public class cleanPowerup : MonoBehaviour {
     }
 
     void Update() {
+        // Si les powerups sortent de l'écran, ils sont détruit
        if (this.transform.position.y + (this.height / 2) < bottom) {
            Destroy(this.gameObject);
        }

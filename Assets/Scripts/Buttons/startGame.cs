@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Script du bouton de lancement de partie
 public class startGame : MonoBehaviour {
 
     public LevelFader fader;

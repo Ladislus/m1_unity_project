@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 7506790540462991156}
+  rigidBody: {fileID: 9113592523805533816}
+  spriteRenderer: {fileID: 6220203561909772621}
   speed: 2
 --- !u!1 &7506790540355658321
 GameObject:
@@ -270,6 +272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 7506790541137339433}
+  rigidBody: {fileID: 7506790540462991157}
+  spriteRenderer: {fileID: 7506790540462991159}
   speed: 2
 --- !u!1 &7506790541137339432
 GameObject:
@@ -389,4 +393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 2631235948942653116}
+  rigidBody: {fileID: 7506790541137339431}
+  spriteRenderer: {fileID: 7506790541137339430}
   speed: 2

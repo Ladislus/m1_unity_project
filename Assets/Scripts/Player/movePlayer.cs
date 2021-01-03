@@ -24,21 +24,18 @@ public class movePlayer : MonoBehaviour {
     }
 
     void Update() {
-
+        float moveHorizontal = 0f;
         if (Input.touchCount > 0) {
-            Debug.DrawLine(
-                this.gameObject.transform.position,
-                Input.GetTouch(0).position,
-                Color.red);
+            float horizontalPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x;
+            moveHorizontal = Mathf.Clamp(-this.transform.position.x + horizontalPosition, -1f, 1f);
         }
 
-
-        this.rigidBody.velocity = new Vector2(this.speed * Input.GetAxis("Horizontal"), 0);
+        this.rigidBody.velocity = new Vector2(this.speed * moveHorizontal, 0);
 
         Quaternion target = Quaternion.Euler(
             this.transform.eulerAngles.x,
             this.transform.eulerAngles.y,
-            0 - (Input.GetAxis("Horizontal") * this.tiltAngle)
+            0 - (moveHorizontal * this.tiltAngle)
         );
 
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, target, Time.deltaTime * smooth);

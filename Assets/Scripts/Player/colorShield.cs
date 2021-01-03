@@ -12,7 +12,7 @@ public class colorShield : MonoBehaviour {
     public SPColor color = SPColor.Blue;
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) {
+        if (Input.touchCount > 1 && Input.GetTouch(1).phase == TouchPhase.Began) {
             if (this.color == SPColor.Blue) {
                 this.color = SPColor.Green;
                 this.spriteRenderer.sprite = this.green_sprite;
